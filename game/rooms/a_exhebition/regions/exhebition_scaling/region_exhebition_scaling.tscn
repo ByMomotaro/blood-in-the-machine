@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dcfkalgkgd7vf"]
+
+[ext_resource type="Script" path="res://game/rooms/a_exhebition/regions/exhebition_scaling/region_exhebition_scaling.gd" id="1_tnvkq"]
+
+[node name="ExhebitionScaling" type="Area2D" unique_id=765156970]
+monitorable = false
+script = ExtResource("1_tnvkq")
+script_name = "ExhebitionScaling"
+description = "Exhebition Scaling"
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=408426658]
+visible = false
+modulate = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)

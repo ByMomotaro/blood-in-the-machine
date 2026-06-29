@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+addons/popochiu/engine/objects/gui/templates/sierra_high_res/components/sierra_inventory_popup_high_res/sierra_inventory_slot_high_res/sierra_inventory_slot_high_res.tscn
+addons/popochiu/engine/objects/gui/templates/simple_click_high_res/components/simple_click_settings_popup_high_res/images/simple_click_settings_popup_icons_high_res.svg.import
+addons/popochiu/engine/objects/gui/templates/simple_click_high_res/components/simple_click_settings_popup_high_res/images/simple_click_settings_popup_icons_high_res.svg
+addons/popochiu/engine/objects/gui/templates/simple_click_high_res/components/simple_click_bar_high_res/images/simple_click_settings_button_high_res.svg.import
+addons/popochiu/engine/objects/gui/templates/simple_click_high_res/components/simple_click_settings_popup_high_res/simple_click_settings_popup_high_res.tscn

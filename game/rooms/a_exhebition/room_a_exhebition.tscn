@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bekdlig3uc6dm"]
+
+[ext_resource type="Script" uid="uid://tbx4emstpitm" path="res://game/rooms/a_exhebition/room_a_exhebition.gd" id="1_s1l0i"]
+[ext_resource type="PackedScene" uid="uid://c35n1wwvbr14j" path="res://game/rooms/a_exhebition/walkable_areas/exhebition_floor/walkable_area_exhebition_floor.tscn" id="2_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://uopmv5rpwwbc" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.tscn" id="3_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://dcfkalgkgd7vf" path="res://game/rooms/a_exhebition/regions/exhebition_scaling/region_exhebition_scaling.tscn" id="4_c4h0o"]
+[ext_resource type="PackedScene" uid="uid://bcxxpc81vc02k" path="res://game/rooms/a_exhebition/markers/exhebition_starting_position/marker_exhebition_starting_position.tscn" id="4_mxvnd"]
+
+[node name="RoomAExhebition" type="Node2D" unique_id=1581114510]
+script = ExtResource("1_s1l0i")
+script_name = "AExhebition"
+width = 320
+height = 180
+metadata/_popochiu_aseprite_config_ = {
+"autotrace_polygons": true,
+"only_visible_layers": true,
+"source": "res://aseprite/ExhebitionBackground.aseprite",
+"tags": [{
+"autoplays": false,
+&"direction": "forward",
+&"from": 0,
+"import": true,
+"loops": false,
+"prop_clickable": true,
+"prop_visible": true,
+"tag_name": "Exhebition Background",
+&"to": 12.0
+}],
+"tags_exp": true,
+"wipe_old_anims": true
+}
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=999099349]
+
+[node name="ExhebitionFloor" parent="WalkableAreas" unique_id=1182288145 instance=ExtResource("2_mxvnd")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1157241702]
+
+[node name="ExhebitionBackground" parent="Props" unique_id=579433237 instance=ExtResource("3_mxvnd")]
+input_pickable = false
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+clickable = false
+baseline = -25
+walk_to_point = Vector2(-36.310936, -34.106716)
+look_at_point = Vector2(-18.394836, -51.843483)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=730448852]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1336164066]
+
+[node name="ExhebitionScaling" parent="Regions" unique_id=765156970 instance=ExtResource("4_c4h0o")]
+position = Vector2(10, 170)
+scaling = true
+scale_top = 0.5
+interaction_polygon = PackedVector2Array(-9.793651, -107.68859, 309.4023, -107.70341, 309.95694, 9.970651, -10, 10)
+
+[node name="Markers" type="Node2D" parent="." unique_id=2020060823]
+
+[node name="ExhebitionStartingPosition" parent="Markers" unique_id=1326526914 instance=ExtResource("4_mxvnd")]
+position = Vector2(282.9872, 157.97066)
+
+[node name="Characters" type="Node2D" parent="." unique_id=112454632]

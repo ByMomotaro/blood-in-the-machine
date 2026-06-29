@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://uopmv5rpwwbc"]
+
+[ext_resource type="Script" uid="uid://c8rw501q3c1o" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.gd" id="1_y3ybf"]
+[ext_resource type="Texture2D" uid="uid://bgwg7fpovvpla" path="res://game/rooms/a_exhebition/props/exhebition_background/Exhebition Background.png" id="2_6pthk"]
+
+[sub_resource type="Animation" id="Animation_ar01n"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 3, 4, 4, 5, 6, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3c43a"]
+_data = {
+&"exhebition_background": SubResource("Animation_ar01n")
+}
+
+[node name="ExhebitionBackground" type="Area2D" unique_id=579433237]
+position = Vector2(160, 90)
+script = ExtResource("1_y3ybf")
+script_name = "ExhebitionBackground"
+description = "Exhebition Background"
+cursor = 1
+interaction_polygon = PackedVector2Array(-160, -90, 160, -90, 160, 90, -160, 90)
+metadata/ANIM_NAME = "Exhebition Background"
+metadata/ANIM_AUTOPLAY = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=575501602]
+texture_filter = 1
+texture = ExtResource("2_6pthk")
+hframes = 3
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2069218694]
+libraries/ = SubResource("AnimationLibrary_3c43a")
+autoplay = &"exhebition_background"
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1880915544]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-160, -90, 160, -90, 160, 90, -160, 90)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1175445821]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -1,0 +1,122 @@
+{ "frames": [
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 1.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 2.aseprite",
+    "frame": { "x": 320, "y": 0, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 3.aseprite",
+    "frame": { "x": 640, "y": 0, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 4.aseprite",
+    "frame": { "x": 0, "y": 180, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 5.aseprite",
+    "frame": { "x": 0, "y": 180, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 6.aseprite",
+    "frame": { "x": 320, "y": 180, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 7.aseprite",
+    "frame": { "x": 320, "y": 180, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 8.aseprite",
+    "frame": { "x": 640, "y": 180, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 9.aseprite",
+    "frame": { "x": 0, "y": 360, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 10.aseprite",
+    "frame": { "x": 0, "y": 360, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   },
+   {
+    "filename": "ExhebitionBackground #Exhebition Background 11.aseprite",
+    "frame": { "x": 320, "y": 360, "w": 320, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 320, "h": 180 },
+    "sourceSize": { "w": 320, "h": 180 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17.2-x64",
+  "image": "Exhebition Background.png",
+  "format": "RGBA8888",
+  "size": { "w": 960, "h": 540 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Exhebition Background", "from": 0, "to": 11, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}
