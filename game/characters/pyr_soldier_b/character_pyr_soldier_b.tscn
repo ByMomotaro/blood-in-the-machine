@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://dcd3wlnwl8b24"]
+
+[ext_resource type="Script" uid="uid://dxx8p0hi3xafi" path="res://game/characters/pyr_soldier_b/character_pyr_soldier_b.gd" id="1_wygme"]
+[ext_resource type="Texture2D" uid="uid://dkv4uvkebyai3" path="res://game/characters/pyr_soldier_b/PyrSoldierB.png" id="2_mh5bp"]
+
+[sub_resource type="Animation" id="Animation_mh5bp"]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 1, 0, 0, 0, 0, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n3cs0"]
+_data = {
+&"idle": SubResource("Animation_mh5bp")
+}
+
+[node name="CharacterPyrSoldierB" type="Area2D" unique_id=1842662303]
+y_sort_enabled = true
+script = ExtResource("1_wygme")
+can_move = false
+scaling_adjust_speed = false
+obstacle = true
+script_name = "PyrSoldierB"
+description = "Pyr Soldier B"
+cursor = 8
+interaction_polygon = PackedVector2Array(-14, -13.800003, -13, -33.800003, -11, -58.800003, -8, -61.800003, -1, -62.800003, 4, -62.800003, 9, -57.800003, 12, -52.800003, 16, -45.800003, 17, -37.800003, 16, 3.199997, 12, 7.199997, 9, 8.199997, -1, 8.199997, -6, 6.199997, -12, 0.19999695, -14, -6.800003)
+interaction_polygon_position = Vector2(0, -2)
+metadata/_popochiu_aseprite_config_ = {
+"autotrace_polygons": true,
+"only_visible_layers": true,
+"source": "res://aseprite/PyrSoldierB.aseprite",
+"tags": [{
+"autoplays": false,
+&"direction": "forward",
+&"from": 0.0,
+"import": true,
+"loops": true,
+"prop_clickable": true,
+"prop_visible": true,
+"tag_name": "idle",
+&"to": 15.0
+}],
+"tags_exp": true,
+"wipe_old_anims": true
+}
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=194222285]
+position = Vector2(0, -0.5)
+scale = Vector2(1, 0.34999996)
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=400111308]
+libraries/ = SubResource("AnimationLibrary_n3cs0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1753111661]
+texture_filter = 1
+position = Vector2(0, -28.8)
+texture = ExtResource("2_mh5bp")
+hframes = 2
+vframes = 2
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1089214252]
+visible = false
+position = Vector2(0, -2)
+polygon = PackedVector2Array(-14, -13.800003, -13, -33.800003, -11, -58.800003, -8, -61.800003, -1, -62.800003, 4, -62.800003, 9, -57.800003, 12, -52.800003, 16, -45.800003, 17, -37.800003, 16, 3.199997, 12, 7.199997, 9, 8.199997, -1, 8.199997, -6, 6.199997, -12, 0.19999695, -14, -6.800003)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=702469298]
+visible = false
+scale = Vector2(2, 2)
+vertices = PackedVector2Array(-16, -16, 18.127731, -15.545856, 11.647415, 15.673557, -16, 16)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

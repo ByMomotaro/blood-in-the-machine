@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://p54pbx6m6afh"]
+
+[ext_resource type="Script" uid="uid://duriocg6m3yar" path="res://game/dialogs/dialogue_manager.gd" id="1_llbit"]
+[ext_resource type="Script" uid="uid://budnld4qd513n" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="2_4n5x4"]
+[ext_resource type="Resource" uid="uid://dhmkfrbpri2m3" path="res://game/dialogs/yarnspinner/blood_in_the_machine.yarnproject" id="3_4n5x4"]
+[ext_resource type="Script" uid="uid://b1o5xpu22evvx" path="res://addons/YarnSpinner-Godot/Runtime/InMemoryVariableStorage.cs" id="3_5lbyi"]
+[ext_resource type="PackedScene" uid="uid://bgpqxisdictui" path="res://game/dialogs/DialogueUI.tscn" id="4_eul86"]
+[ext_resource type="Script" uid="uid://c5gxawri864uf" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="6_5lbyi"]
+
+[node name="DialogueManager" type="Node" unique_id=1812787870]
+script = ExtResource("1_llbit")
+
+[node name="DialogueRunner" type="Node" parent="." unique_id=1879482289 node_paths=PackedStringArray("variableStorage", "lineProvider", "dialoguePresenters")]
+script = ExtResource("2_4n5x4")
+yarnProject = ExtResource("3_4n5x4")
+variableStorage = NodePath("../InMemoryVariableStorage")
+lineProvider = NodePath("../TextLineProvider")
+dialoguePresenters = [NodePath("../DialogueUi/LinePresenter")]
+metadata/_custom_type_script = "uid://budnld4qd513n"
+
+[node name="InMemoryVariableStorage" type="Node" parent="." unique_id=1705547142]
+script = ExtResource("3_5lbyi")
+metadata/_custom_type_script = "uid://b1o5xpu22evvx"
+
+[node name="TextLineProvider" type="Node" parent="." unique_id=531283767]
+script = ExtResource("6_5lbyi")
+YarnProject = ExtResource("3_4n5x4")
+metadata/_custom_type_script = "uid://c5gxawri864uf"
+
+[node name="DialogueUi" parent="." unique_id=950382014 instance=ExtResource("4_eul86")]
+
+[node name="DialogueLabel" parent="DialogueUi/BackgroundLabel/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(950382014, 1027162774) index="1" unique_id=1793664518]
+fit_content = true
+
+[node name="LinePresenter" parent="DialogueUi" index="1" unique_id=149185256 node_paths=PackedStringArray("dialogueRunner", "lineText", "characterNameText", "characterNameContainer", "eventHandlers")]
+dialogueRunner = NodePath("../../DialogueRunner")
+lineText = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/DialogueLabel")
+characterNameText = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/SpeakerContainer/SpeakerLabel")
+characterNameContainer = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/SpeakerContainer")
+lettersPerSecond = 20
+wordsPerSecond = 4
+eventHandlers = [NodePath("LinePresenterButtonHandler")]
+
+[node name="LinePresenterButtonHandler" parent="DialogueUi/LinePresenter" index="0" unique_id=673606945 node_paths=PackedStringArray("continueButton", "dialogueRunner")]
+continueButton = NodePath("../../BackgroundLabel/MarginContainer/VBoxContainer/ContinueIndicatorButton")
+dialogueRunner = NodePath("../../../DialogueRunner")
+
+[editable path="DialogueUi"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://v2bnf0w20lpw"]
+
+[ext_resource type="Script" path="res://game/characters/pyr_soldier_a/character_pyr_soldier_a_state.gd" id="1_cmjsx"]
+
+[resource]
+resource_name = "PyrSoldierA"
+script = ExtResource("1_cmjsx")
+script_name = "PyrSoldierA"
+scene = "res://game/characters/pyr_soldier_a/character_pyr_soldier_a.tscn"
