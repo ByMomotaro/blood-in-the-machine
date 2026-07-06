@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b1o5xpu22evvx" path="res://addons/YarnSpinner-Godot/Runtime/InMemoryVariableStorage.cs" id="3_5lbyi"]
 [ext_resource type="PackedScene" uid="uid://bgpqxisdictui" path="res://game/dialogs/DialogueUI.tscn" id="4_eul86"]
 [ext_resource type="Script" uid="uid://c5gxawri864uf" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="6_5lbyi"]
+[ext_resource type="PackedScene" uid="uid://b4jeoloix2vte" path="res://game/dialogs/ChoiceItem.tscn" id="7_eul86"]
 
 [node name="DialogueManager" type="Node" unique_id=1812787870]
 script = ExtResource("1_llbit")
@@ -15,7 +16,7 @@ script = ExtResource("2_4n5x4")
 yarnProject = ExtResource("3_4n5x4")
 variableStorage = NodePath("../InMemoryVariableStorage")
 lineProvider = NodePath("../TextLineProvider")
-dialoguePresenters = [NodePath("../DialogueUi/LinePresenter")]
+dialoguePresenters = [NodePath("../DialogueUi/LinePresenter"), NodePath("../DialogueUi/OptionsPresenter")]
 metadata/_custom_type_script = "uid://budnld4qd513n"
 
 [node name="InMemoryVariableStorage" type="Node" parent="." unique_id=1705547142]
@@ -29,20 +30,52 @@ metadata/_custom_type_script = "uid://c5gxawri864uf"
 
 [node name="DialogueUi" parent="." unique_id=950382014 instance=ExtResource("4_eul86")]
 
-[node name="DialogueLabel" parent="DialogueUi/BackgroundLabel/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(950382014, 1027162774) index="1" unique_id=1793664518]
-fit_content = true
-
-[node name="LinePresenter" parent="DialogueUi" index="1" unique_id=149185256 node_paths=PackedStringArray("dialogueRunner", "lineText", "characterNameText", "characterNameContainer", "eventHandlers")]
+[node name="LinePresenter" parent="DialogueUi" index="1" unique_id=149185256 node_paths=PackedStringArray("dialogueRunner", "presenterControl", "lineText", "characterNameText", "characterNameContainer", "eventHandlers")]
 dialogueRunner = NodePath("../../DialogueRunner")
-lineText = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/DialogueLabel")
-characterNameText = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/SpeakerContainer/SpeakerLabel")
-characterNameContainer = NodePath("../BackgroundLabel/MarginContainer/VBoxContainer/SpeakerContainer")
-lettersPerSecond = 20
+presenterControl = NodePath("PresenterControl")
+lineText = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/DialogueLabel")
+characterNameText = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer/SpeakerLabel")
+characterNameContainer = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer")
+lettersPerSecond = 60
 wordsPerSecond = 4
 eventHandlers = [NodePath("LinePresenterButtonHandler")]
 
-[node name="LinePresenterButtonHandler" parent="DialogueUi/LinePresenter" index="0" unique_id=673606945 node_paths=PackedStringArray("continueButton", "dialogueRunner")]
-continueButton = NodePath("../../BackgroundLabel/MarginContainer/VBoxContainer/ContinueIndicatorButton")
+[node name="SpeakerLabel" parent="DialogueUi/LinePresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer" parent_id_path=PackedInt32Array(950382014, 94024662) index="0" unique_id=809851853]
+text = "Example Name"
+
+[node name="DialogueLabel" parent="DialogueUi/LinePresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(950382014, 1027162774) index="1" unique_id=1793664518]
+text = "Dialogue Example"
+fit_content = true
+
+[node name="ContinueIndicatorButton" parent="DialogueUi/LinePresenter/PresenterControl/BackgroundPanel" parent_id_path=PackedInt32Array(950382014, 793429046) index="1" unique_id=1881961776]
+offset_left = 238.0
+offset_top = 84.0
+offset_right = 254.0
+offset_bottom = 101.0
+
+[node name="LinePresenterButtonHandler" parent="DialogueUi/LinePresenter" index="1" unique_id=673606945 node_paths=PackedStringArray("continueButton", "dialogueRunner")]
+continueButton = NodePath("../PresenterControl/BackgroundPanel/ContinueIndicatorButton")
 dialogueRunner = NodePath("../../../DialogueRunner")
+
+[node name="OptionsPresenter" parent="DialogueUi" index="2" unique_id=609288317 node_paths=PackedStringArray("presenterControl", "lastLineText", "lastLineContainer", "lastLineCharacterNameText", "lastLineCharacterNameContainer", "optionParent")]
+presenterControl = NodePath("PresenterControl")
+optionItemPrefab = ExtResource("7_eul86")
+showsLastLine = true
+lastLineText = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/DialogueLabel")
+lastLineContainer = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer")
+lastLineCharacterNameText = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer/SpeakerLabel")
+lastLineCharacterNameContainer = NodePath("PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer")
+optionParent = NodePath("PresenterControl/MarginContainer/VBoxContainer")
+
+[node name="SpeakerLabel" parent="DialogueUi/OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer" parent_id_path=PackedInt32Array(950382014, 1940747854) index="0" unique_id=20229980]
+text = "Example Name"
+
+[node name="DialogueLabel" parent="DialogueUi/OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(950382014, 619089823) index="1" unique_id=1288058462]
+text = "Dialogue Example"
+fit_content = true
+
+[node name="VBoxContainer" parent="DialogueUi/OptionsPresenter/PresenterControl/MarginContainer" parent_id_path=PackedInt32Array(950382014, 757389756) index="0" unique_id=1736262357]
+size_flags_vertical = 0
+theme_override_constants/separation = 0
 
 [editable path="DialogueUi"]

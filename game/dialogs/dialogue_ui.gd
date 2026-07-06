@@ -1,7 +1,9 @@
 extends CanvasLayer
 
+#region @onready Variables
 @onready var continue_indicator_button: TextureButton = %ContinueIndicatorButton
 @onready var line_presenter_button_handler: Control = $LinePresenter/LinePresenterButtonHandler
+#endregion
 
 func _unhandled_input(event: InputEvent) -> void:
 	if !visible:

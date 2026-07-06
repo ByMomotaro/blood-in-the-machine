@@ -2,57 +2,193 @@
 
 [ext_resource type="Script" uid="uid://cp751kqfdoxsp" path="res://game/dialogs/dialogue_ui.gd" id="1_bxcf2"]
 [ext_resource type="Script" uid="uid://b8nsxur6opm4k" path="res://addons/YarnSpinner-Godot/Runtime/Async/LinePresenter.cs" id="1_c86un"]
-[ext_resource type="Texture2D" uid="uid://dfsxrjvjch35u" path="res://icon.svg" id="2_48qf2"]
 [ext_resource type="Script" uid="uid://cm822dsbyq7mj" path="res://addons/YarnSpinner-Godot/Runtime/Async/LinePresenterButtonHandler.cs" id="4_ga0jd"]
+[ext_resource type="Texture2D" uid="uid://fhn46a7vxivi" path="res://game/gui/images/DialogueBorder.png" id="4_nuc5a"]
+[ext_resource type="Theme" uid="uid://bbk5rlijek5tu" path="res://game/gui/themes/RichTextLabelTheme.tres" id="4_ykaf4"]
+[ext_resource type="FontFile" uid="uid://0kxyngjfq30k" path="res://game/gui/fonts/Pixelta.ttf" id="5_8vbme"]
+[ext_resource type="Script" uid="uid://ba6k2ox6e4qg" path="res://addons/YarnSpinner-Godot/Runtime/Async/OptionsPresenter.cs" id="5_glo7y"]
+[ext_resource type="Theme" uid="uid://15dx257opjha" path="res://game/gui/themes/ContinueButton.tres" id="6_usnjv"]
+[ext_resource type="Texture2D" uid="uid://dfuwabjfvlnqk" path="res://game/gui/images/DialogueBackground.png" id="6_v4spl"]
+[ext_resource type="Texture2D" uid="uid://ch3hu8ip5jpi1" path="res://game/gui/images/ContinueButtonPressed.png" id="7_nuc5a"]
+[ext_resource type="Texture2D" uid="uid://c7ycqg587s4a6" path="res://game/gui/images/ContinueButtonNormal.png" id="7_xxett"]
+[ext_resource type="Texture2D" uid="uid://7u17ye2chyuq" path="res://game/gui/images/ContinueButtonHover.png" id="8_v0im7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4spl"]
+texture = ExtResource("6_v4spl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0im7"]
 
 [node name="DialogueUi" type="CanvasLayer" unique_id=950382014]
 script = ExtResource("1_bxcf2")
 
-[node name="BackgroundLabel" type="Panel" parent="." unique_id=793429046]
-offset_left = 36.0
-offset_top = 27.0
-offset_right = 277.0
-offset_bottom = 161.0
-
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundLabel" unique_id=578417042]
-layout_mode = 0
-offset_right = 241.0
-offset_bottom = 134.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundLabel/MarginContainer" unique_id=1027162774]
-layout_mode = 2
-
-[node name="SpeakerContainer" type="MarginContainer" parent="BackgroundLabel/MarginContainer/VBoxContainer" unique_id=94024662]
-layout_mode = 2
-
-[node name="SpeakerLabel" type="RichTextLabel" parent="BackgroundLabel/MarginContainer/VBoxContainer/SpeakerContainer" unique_id=809851853]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Example Text"
-fit_content = true
-
-[node name="DialogueLabel" type="RichTextLabel" parent="BackgroundLabel/MarginContainer/VBoxContainer" unique_id=1793664518]
-unique_name_in_owner = true
-layout_mode = 2
-bbcode_enabled = true
-text = "Dialoge Amk"
-scroll_active = false
-
-[node name="ContinueIndicatorButton" type="TextureButton" parent="BackgroundLabel/MarginContainer/VBoxContainer" unique_id=1881961776]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = ExtResource("2_48qf2")
+[node name="Panel" type="Panel" parent="." unique_id=342362424]
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v4spl")
 
 [node name="LinePresenter" type="Node" parent="." unique_id=149185256]
 script = ExtResource("1_c86un")
+useFadeEffect = false
 lettersPerSecond = 10
 typewriterStyle = 1
 metadata/_custom_type_script = "uid://b8nsxur6opm4k"
 
-[node name="LinePresenterButtonHandler" type="Control" parent="LinePresenter" unique_id=673606945 node_paths=PackedStringArray("continueButton")]
+[node name="PresenterControl" type="Control" parent="LinePresenter" unique_id=1317430433]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 180.0
+grow_horizontal = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="LinePresenter/PresenterControl" unique_id=1813855096]
+position = Vector2(160, 90)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_nuc5a")
+
+[node name="BackgroundPanel" type="Panel" parent="LinePresenter/PresenterControl" unique_id=793429046]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = 0.056
+anchor_right = 0.90900004
+anchor_bottom = 0.683
+offset_left = 5.0
+offset_top = -1.0799999
+offset_right = 0.11999512
+offset_bottom = -3.9400024
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v0im7")
+
+[node name="MarginContainer" type="MarginContainer" parent="LinePresenter/PresenterControl/BackgroundPanel" unique_id=578417042]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034351144
+anchor_top = 0.103174604
+anchor_right = 0.96564883
+anchor_bottom = 0.8968254
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LinePresenter/PresenterControl/BackgroundPanel/MarginContainer" unique_id=1027162774]
+layout_mode = 2
+
+[node name="SpeakerContainer" type="MarginContainer" parent="LinePresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=94024662]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="LinePresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer" unique_id=809851853]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_ykaf4")
+theme_override_fonts/normal_font = ExtResource("5_8vbme")
+theme_override_font_sizes/normal_font_size = 10
+text = "Example Text"
+fit_content = true
+
+[node name="DialogueLabel" type="RichTextLabel" parent="LinePresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1793664518]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_ykaf4")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "Dialoge Amk"
+scroll_active = false
+
+[node name="ContinueIndicatorButton" type="TextureButton" parent="LinePresenter/PresenterControl/BackgroundPanel" unique_id=1881961776]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 239.0
+offset_top = 86.0
+offset_right = 255.0
+offset_bottom = 103.0
+theme = ExtResource("6_usnjv")
+texture_normal = ExtResource("7_xxett")
+texture_pressed = ExtResource("7_nuc5a")
+texture_hover = ExtResource("8_v0im7")
+texture_focused = ExtResource("7_xxett")
+
+[node name="LinePresenterButtonHandler" type="Control" parent="LinePresenter" unique_id=673606945]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("4_ga0jd")
-continueButton = NodePath("")
+
+[node name="OptionsPresenter" type="Node" parent="." unique_id=609288317]
+script = ExtResource("5_glo7y")
+useFadeEffect = false
+metadata/_custom_type_script = "uid://ba6k2ox6e4qg"
+
+[node name="PresenterControl" type="Control" parent="OptionsPresenter" unique_id=101927299]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 180.0
+grow_horizontal = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="OptionsPresenter/PresenterControl" unique_id=1173919341]
+position = Vector2(160, 90)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_nuc5a")
+
+[node name="BackgroundPanel" type="Panel" parent="OptionsPresenter/PresenterControl" unique_id=105612458]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = 0.056
+anchor_right = 1.0
+anchor_bottom = 0.628
+offset_left = 5.0
+offset_top = -1.0799999
+offset_right = -29.0
+offset_bottom = 5.959999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v0im7")
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPresenter/PresenterControl/BackgroundPanel" unique_id=683454861]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034351144
+anchor_top = 0.1
+anchor_right = 0.96564883
+anchor_bottom = 0.8968253
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer" unique_id=619089823]
+layout_mode = 2
+
+[node name="SpeakerContainer" type="MarginContainer" parent="OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1940747854]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer/SpeakerContainer" unique_id=20229980]
+layout_mode = 2
+theme = ExtResource("4_ykaf4")
+theme_override_fonts/normal_font = ExtResource("5_8vbme")
+theme_override_font_sizes/normal_font_size = 10
+text = "Example Text"
+fit_content = true
+
+[node name="DialogueLabel" type="RichTextLabel" parent="OptionsPresenter/PresenterControl/BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1288058462]
+layout_mode = 2
+theme = ExtResource("4_ykaf4")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "Dialoge Amk"
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsPresenter/PresenterControl" unique_id=757389756]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 119.0
+offset_right = 285.0
+offset_bottom = 178.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPresenter/PresenterControl/MarginContainer" unique_id=1736262357]
+layout_mode = 2
+alignment = 1

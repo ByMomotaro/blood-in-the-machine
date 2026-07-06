@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b4jeoloix2vte"]
+
+[ext_resource type="Script" uid="uid://e8endtpbxsql" path="res://addons/YarnSpinner-Godot/Runtime/Async/OptionItem.cs" id="1_i178h"]
+[ext_resource type="FontFile" uid="uid://vq2b7cqugotw" path="res://game/gui/fonts/Silver.ttf" id="2_eygsb"]
+[ext_resource type="Texture2D" uid="uid://y4y7cvoiesv3" path="res://game/gui/images/OptionBorderNormal.png" id="2_kqrej"]
+[ext_resource type="Texture2D" uid="uid://d043jntrkidif" path="res://game/gui/images/OptionBorderHover.png" id="3_wy6cu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fubn"]
+
+[node name="ChoiceDisplay" type="PanelContainer" unique_id=719621532 node_paths=PackedStringArray("text", "button")]
+anchors_preset = -1
+anchor_left = 0.109375
+anchor_right = 0.890625
+anchor_bottom = 0.078
+offset_bottom = -0.03999996
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2fubn")
+script = ExtResource("1_i178h")
+text = NodePath("RichTextLabel")
+button = NodePath("TextureButton")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1553357589]
+layout_mode = 2
+texture_normal = ExtResource("2_kqrej")
+texture_hover = ExtResource("3_wy6cu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=858750928]
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_eygsb")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "Beispiel"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://clrouwuolk4or"
+path="res://.godot/imported/exhebition_pyr_soldier_a.yarn-fa65bf38ab2f4a600703079c902377b7.tres"
+
+[deps]
+
+source_file="res://game/dialogs/yarnspinner/exhebition/exhebition_pyr_soldier_a.yarn"
+dest_files=["res://.godot/imported/exhebition_pyr_soldier_a.yarn-fa65bf38ab2f4a600703079c902377b7.tres"]
+
+[params]
+

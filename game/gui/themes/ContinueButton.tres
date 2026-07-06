@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://15dx257opjha"]
+
+[ext_resource type="FontFile" uid="uid://vq2b7cqugotw" path="res://game/gui/fonts/Silver.ttf" id="1_rcg3k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lynb2"]
+
+[resource]
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_rcg3k")
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxTexture_lynb2")
+Button/styles/pressed = null

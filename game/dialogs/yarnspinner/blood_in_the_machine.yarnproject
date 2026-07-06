@@ -4,7 +4,12 @@
     "**/*.yarn"
   ],
   "excludeFiles": [],
-  "localisation": {},
+  "localisation": {
+    "en": {
+      "assets": "",
+      "strings": "res://game/dialogs/localisation/en-US.csv"
+    }
+  },
   "baseLanguage": "de",
   "compilerOptions": {}
 }
