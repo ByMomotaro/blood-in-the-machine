@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://i3lb6pdcvak"]
+
+[ext_resource type="Script" uid="uid://dyiycdwygixbx" path="res://game/characters/bran/character_bran.gd" id="1_kx4x3"]
+[ext_resource type="Texture2D" uid="uid://cmio6bfn2qx1j" path="res://game/characters/bran/Bran.png" id="2_50fbg"]
+
+[sub_resource type="Animation" id="Animation_50fbg"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 3, 3, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8nhul"]
+_data = {
+&"idle": SubResource("Animation_50fbg")
+}
+
+[node name="CharacterBran" type="Area2D" unique_id=1931362782]
+y_sort_enabled = true
+script = ExtResource("1_kx4x3")
+script_name = "Bran"
+description = "Bran"
+cursor = 8
+interaction_polygon = PackedVector2Array(-17, -26.400002, -12, -44.4, -7, -49.4, -1.7200623, -51.773, 5.0762787, -50.205494, 10, -32.4, 13, -8.400002, 13, -3.4000015, 8, 1.5999985, -11, 1.5999985, -15, -4.4000015)
+interaction_polygon_position = Vector2(0, 2.5999985)
+metadata/_popochiu_aseprite_config_ = {
+"autotrace_polygons": true,
+"only_visible_layers": true,
+"source": "res://aseprite/Bran.aseprite",
+"tags": [{
+"autoplays": false,
+&"direction": "forward",
+&"from": 0.0,
+"import": true,
+"loops": true,
+"prop_clickable": true,
+"prop_visible": true,
+"tag_name": "idle",
+&"to": 19.0
+}],
+"tags_exp": true,
+"wipe_old_anims": true
+}
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2145309380]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1358842382]
+libraries/ = SubResource("AnimationLibrary_8nhul")
+autoplay = &"idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1958913927]
+texture_filter = 1
+position = Vector2(0, -30.400002)
+texture = ExtResource("2_50fbg")
+hframes = 3
+vframes = 2
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=43642541]
+visible = false
+position = Vector2(0, 2.5999985)
+polygon = PackedVector2Array(-17, -26.400002, -12, -44.4, -7, -49.4, -1.7200623, -51.773, 5.0762787, -50.205494, 10, -32.4, 13, -8.400002, 13, -3.4000015, 8, 1.5999985, -11, 1.5999985, -15, -4.4000015)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1171477385]
+visible = false
+vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

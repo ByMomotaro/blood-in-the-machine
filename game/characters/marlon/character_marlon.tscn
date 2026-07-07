@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://iorrkij76fm3" path="res://game/characters/marlon/character_marlon.gd" id="1_egdt0"]
 [ext_resource type="Texture2D" uid="uid://b0w4ixs0hi1pl" path="res://game/characters/marlon/Marlon.png" id="2_0tire"]
 
-[sub_resource type="Animation" id="Animation_llauf"]
+[sub_resource type="Animation" id="Animation_0tire"]
 length = 2.6
 loop_mode = 1
 tracks/0/type = "value"
@@ -55,21 +55,21 @@ tracks/3/keys = {
 "values": [0, 0, 0, 0, 1, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 5, 6, 3, 0, 0, 0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6ywl"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_llauf"]
 _data = {
-&"idle": SubResource("Animation_llauf")
+&"idle": SubResource("Animation_0tire")
 }
 
-[node name="CharacterMarlon" type="Area2D" unique_id=973077366]
+[node name="CharacterMarlon" type="Area2D" unique_id=79475210]
 y_sort_enabled = true
 script = ExtResource("1_egdt0")
 can_move = false
-obstacle = true
+scaling_adjust_speed = false
 script_name = "Marlon"
 description = "Marlon"
 cursor = 8
-interaction_polygon = PackedVector2Array(-19, 17, -18, 10, -13, 1, -5, -9, -1, -13, 5, -16, 12, -15, 18, -8, 18, -1, 12, 19, 9, 22, -7, 23, -15, 23, -19, 20)
-interaction_polygon_position = Vector2(0, -20)
+interaction_polygon = PackedVector2Array(-19, -11.599998, -18, -18.599998, -13, -27.599998, -5, -37.6, -1, -41.6, 5, -44.6, 12, -43.6, 18, -36.6, 18, -29.599998, 12, -9.599998, 9, -6.5999985, -7, -5.5999985, -15, -5.5999985, -19, -8.599998)
+interaction_polygon_position = Vector2(0, 7)
 metadata/_popochiu_aseprite_config_ = {
 "autotrace_polygons": true,
 "only_visible_layers": true,
@@ -89,29 +89,28 @@ metadata/_popochiu_aseprite_config_ = {
 "wipe_old_anims": true
 }
 
-[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=110562402]
-position = Vector2(-3.5, -1.5)
-scale = Vector2(1.35, 0.25)
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1580279635]
+position = Vector2(0, -14.5)
+scale = Vector2(1, 0.65)
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=23771407]
-libraries/ = SubResource("AnimationLibrary_a6ywl")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1074516801]
+libraries/ = SubResource("AnimationLibrary_llauf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1568355332]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037124063]
 texture_filter = 1
-position = Vector2(0, -21)
+position = Vector2(0, -31)
 texture = ExtResource("2_0tire")
 hframes = 3
 vframes = 3
 
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=757724655]
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=23544479]
 visible = false
-position = Vector2(0, -20)
-polygon = PackedVector2Array(-19, 17, -18, 10, -13, 1, -5, -9, -1, -13, 5, -16, 12, -15, 18, -8, 18, -1, 12, 19, 9, 22, -7, 23, -15, 23, -19, 20)
+position = Vector2(0, 7)
+polygon = PackedVector2Array(-19, -11.599998, -18, -18.599998, -13, -27.599998, -5, -37.6, -1, -41.6, 5, -44.6, 12, -43.6, 18, -36.6, 18, -29.599998, 12, -9.599998, 9, -6.5999985, -7, -5.5999985, -15, -5.5999985, -19, -8.599998)
 
-[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=777839093]
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2118727133]
 visible = false
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
-avoidance_enabled = false
