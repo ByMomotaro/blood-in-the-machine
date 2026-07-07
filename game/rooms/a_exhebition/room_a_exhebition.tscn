@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bcxxpc81vc02k" path="res://game/rooms/a_exhebition/markers/exhebition_starting_position/marker_exhebition_starting_position.tscn" id="4_mxvnd"]
 [ext_resource type="PackedScene" uid="uid://cl0egxogep1mi" path="res://game/characters/pyr_soldier_a/character_pyr_soldier_a.tscn" id="6_xyw8r"]
 [ext_resource type="PackedScene" uid="uid://dcd3wlnwl8b24" path="res://game/characters/pyr_soldier_b/character_pyr_soldier_b.tscn" id="7_5evls"]
+[ext_resource type="PackedScene" uid="uid://b372yokjyfxai" path="res://game/characters/marlon/character_marlon.tscn" id="8_4o28c"]
 
 [node name="RoomAExhebition" type="Node2D" unique_id=1581114510]
 script = ExtResource("1_s1l0i")
@@ -46,7 +47,6 @@ metadata/_popochiu_aseprite_config_ = {
 
 [node name="ExhebitionScaling" parent="Regions" unique_id=765156970 instance=ExtResource("4_c4h0o")]
 position = Vector2(10, 170)
-scaling = true
 scale_top = 0.5
 interaction_polygon = PackedVector2Array(-9.793651, -107.68859, 309.4023, -107.70341, 309.95694, 9.970651, -10, 10)
 
@@ -68,3 +68,9 @@ position = Vector2(21, 91)
 walk_to_point = Vector2(3.80048, 8.682266)
 look_at_point = Vector2(-4.4080467, -24.326538)
 metadata/EDITOR_TMP_COPY_OF = "PyrSoldierB"
+
+[node name="CharacterMarlon *" parent="Characters" unique_id=973077366 instance=ExtResource("8_4o28c")]
+position = Vector2(50, 159)
+walk_to_point = Vector2(-26.877441, -4.337677)
+look_at_point = Vector2(-0.5245476, -11.02356)
+metadata/EDITOR_TMP_COPY_OF = "Marlon"

@@ -20,7 +20,6 @@ func _ready() -> void:
 	dialogue_runner.onDialogueStart.connect(_on_dialogue_started)
 	dialogue_runner.onDialogueComplete.connect(_on_dialogue_completed)
 
-
 func start_dialogue(node_name: String) -> void:
 	if is_dialogue_running:
 		return
@@ -47,4 +46,3 @@ func apply_text_speed() -> void:
 
 func apply_language() -> void:
 	text_line_provider.LocaleCode = GameSettings.language
-	print(text_line_provider.LocaleCode)

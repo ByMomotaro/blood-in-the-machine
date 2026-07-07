@@ -1,9 +1,9 @@
 # @popochiu-docs-ignore-class
 extends PopochiuInventoryItem
 
-const Data := preload('inventory_item_idle_state.gd')
+const Data := preload('inventory_item_phiole_mit_grüner_flüssigkeit_state.gd')
 
-var state: Data = load("res://game/inventory_items/idle/inventory_item_idle.tres")
+var state: Data = load("res://game/inventory_items/phiole_mit_grüner_flüssigkeit/inventory_item_phiole_mit_grüner_flüssigkeit.tres")
 
 
 #region Virtual ####################################################################################

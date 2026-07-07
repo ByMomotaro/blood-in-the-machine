@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5wkgjsncmbsd"
-path="res://.godot/imported/Button Placeholder.png-02bc653d8b57923cb2f789f6449c7611.ctex"
+uid="uid://dchp4mf5vmkgp"
+path="res://.godot/imported/Inventory.png-18730749108d1d69c5e27a2a20470659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aseprite/Button Placeholder.png"
-dest_files=["res://.godot/imported/Button Placeholder.png-02bc653d8b57923cb2f789f6449c7611.ctex"]
+source_file="res://game/gui/images/Inventory.png"
+dest_files=["res://.godot/imported/Inventory.png-18730749108d1d69c5e27a2a20470659.ctex"]
 
 [params]
 

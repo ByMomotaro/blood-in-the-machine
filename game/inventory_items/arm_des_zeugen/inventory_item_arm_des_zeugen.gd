@@ -1,9 +1,9 @@
 # @popochiu-docs-ignore-class
 extends PopochiuInventoryItem
 
-const Data := preload('inventory_item_exhebition_background_state.gd')
+const Data := preload('inventory_item_arm_des_zeugen_state.gd')
 
-var state: Data = load("res://game/inventory_items/exhebition_background/inventory_item_exhebition_background.tres")
+var state: Data = load("res://game/inventory_items/arm_des_zeugen/inventory_item_arm_des_zeugen.tres")
 
 
 #region Virtual ####################################################################################

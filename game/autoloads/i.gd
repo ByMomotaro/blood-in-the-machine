@@ -2,16 +2,19 @@
 extends "res://addons/popochiu/engine/interfaces/i_inventory.gd"
 
 # classes ----
-const PIIExhebitionBackground := preload("res://game/inventory_items/exhebition_background/inventory_item_exhebition_background.gd")
-const PIIIdle := preload("res://game/inventory_items/idle/inventory_item_idle.gd")
+const PIIPhioleMitGrünerFlüssigkeit := preload("res://game/inventory_items/phiole_mit_grüner_flüssigkeit/inventory_item_phiole_mit_grüner_flüssigkeit.gd")
+const PIIArmProthese := preload("res://game/inventory_items/arm_prothese/inventory_item_arm_prothese.gd")
+const PIIArmDesZeugen := preload("res://game/inventory_items/arm_des_zeugen/inventory_item_arm_des_zeugen.gd")
 # ---- classes
 
 # nodes ----
-var ExhebitionBackground: PIIExhebitionBackground : get = get_ExhebitionBackground
-var Idle: PIIIdle : get = get_Idle
+var PhioleMitGrünerFlüssigkeit: PIIPhioleMitGrünerFlüssigkeit : get = get_PhioleMitGrünerFlüssigkeit
+var ArmProthese: PIIArmProthese : get = get_ArmProthese
+var ArmDesZeugen: PIIArmDesZeugen : get = get_ArmDesZeugen
 # ---- nodes
 
 # functions ----
-func get_ExhebitionBackground() -> PIIExhebitionBackground: return get_item_instance("ExhebitionBackground")
-func get_Idle() -> PIIIdle: return get_item_instance("Idle")
+func get_PhioleMitGrünerFlüssigkeit() -> PIIPhioleMitGrünerFlüssigkeit: return get_item_instance("PhioleMitGrünerFlüssigkeit")
+func get_ArmProthese() -> PIIArmProthese: return get_item_instance("ArmProthese")
+func get_ArmDesZeugen() -> PIIArmDesZeugen: return get_item_instance("ArmDesZeugen")
 # ---- functions

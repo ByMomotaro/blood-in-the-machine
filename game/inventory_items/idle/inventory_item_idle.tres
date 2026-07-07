@@ -1,9 +1,0 @@
-[gd_resource type="Resource" format=3 uid="uid://unmemu6i125m"]
-
-[ext_resource type="Script" path="res://game/inventory_items/idle/inventory_item_idle_state.gd" id="1_imb02"]
-
-[resource]
-resource_name = "Idle"
-script = ExtResource("1_imb02")
-script_name = "Idle"
-scene = "res://game/inventory_items/idle/inventory_item_idle.tscn"

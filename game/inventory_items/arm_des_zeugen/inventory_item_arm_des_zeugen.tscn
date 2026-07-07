@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://6jituv15au5l"]
+
+[ext_resource type="Script" uid="uid://kefvb1fufn8q" path="res://game/inventory_items/arm_des_zeugen/inventory_item_arm_des_zeugen.gd" id="1_mynd4"]
+[ext_resource type="Texture2D" uid="uid://btog73f7hwcfq" path="res://game/inventory_items/arm_des_zeugen/arm_des_zeugen.png" id="1_vliu8"]
+
+[node name="ItemArmDesZeugen" type="TextureRect" unique_id=537384393]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_vliu8")
+stretch_mode = 5
+script = ExtResource("1_mynd4")
+script_name = "ArmDesZeugen"
+description = "Arm Des Zeugen"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=609492329]

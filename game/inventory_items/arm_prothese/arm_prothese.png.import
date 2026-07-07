@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtv8k56yx1bp8"
-path="res://.godot/imported/idle.png-8983f05427d0b8561b341a43b4b7a917.ctex"
+uid="uid://524djbtchkba"
+path="res://.godot/imported/arm_prothese.png-e1650c357a255331ede0b82139b239c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/inventory_items/idle/idle.png"
-dest_files=["res://.godot/imported/idle.png-8983f05427d0b8561b341a43b4b7a917.ctex"]
+source_file="res://game/inventory_items/arm_prothese/arm_prothese.png"
+dest_files=["res://.godot/imported/arm_prothese.png-e1650c357a255331ede0b82139b239c5.ctex"]
 
 [params]
 

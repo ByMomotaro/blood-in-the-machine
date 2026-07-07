@@ -13,7 +13,6 @@ var state: Data = load("res://game/rooms/a_exhebition/room_a_exhebition.tres")
 # Add any code you want to setup the stage before the room is shown to the player (e.g. setting
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
-	DialogueManager.start_dialogue("ExhebitionPyrSoldierA")
 	C.player.position = starting_position.position
 
 # Called after the room transition completes; the room is now visible.
@@ -29,6 +28,5 @@ func _on_room_transition_finished() -> void:
 # Implement cleanup code, handle custom data or states before leaving the room, etc. if needed.
 func _on_room_exited() -> void:
 	pass
-
 
 #endregion

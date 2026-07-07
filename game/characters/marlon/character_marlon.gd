@@ -4,9 +4,9 @@ extends PopochiuCharacter
 # You can use `E.queue([])` in any of the methods in this script to trigger a sequence of events.
 # Use `await E.queue([])` to pause execution until the sequence completes.
 
-const Data := preload('character_pyr_soldier_b_state.gd')
+const Data := preload('character_marlon_state.gd')
 
-var state: Data = load("res://game/characters/pyr_soldier_b/character_pyr_soldier_b.tres")
+var state: Data = load("res://game/characters/marlon/character_marlon.tres")
 
 
 #region Virtual ####################################################################################
@@ -17,7 +17,12 @@ func _on_room_set() -> void:
 
 # Called when the character is clicked
 func _on_click() -> void:
-	pass
+	# Replace the call to E.command_fallback() with your own logic.
+	E.command_fallback()
+	# Example: make the player walk to this character, face them, then say a line.
+#	await C.player.walk_to_clicked()
+#	await C.player.face_clicked()
+#	await C.player.say("Hi!")
 
 
 # Called when the character is double-clicked

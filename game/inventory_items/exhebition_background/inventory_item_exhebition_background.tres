@@ -1,9 +1,0 @@
-[gd_resource type="Resource" format=3 uid="uid://2h6qglw3op7o"]
-
-[ext_resource type="Script" uid="uid://ceqniqjig4oal" path="res://game/inventory_items/exhebition_background/inventory_item_exhebition_background_state.gd" id="1_ee310"]
-
-[resource]
-resource_name = "ExhebitionBackground"
-script = ExtResource("1_ee310")
-script_name = "ExhebitionBackground"
-scene = "res://game/inventory_items/exhebition_background/inventory_item_exhebition_background.tscn"
