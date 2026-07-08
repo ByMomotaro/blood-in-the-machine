@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://c0ifba46sbcee"
+path="res://.godot/imported/exhebition_marlon.yarn-fa740af2342cedcb0a5aaa8f87e6a75a.tres"
+
+[deps]
+
+source_file="res://game/dialogs/yarnspinner/exhebition/exhebition_marlon.yarn"
+dest_files=["res://.godot/imported/exhebition_marlon.yarn-fa740af2342cedcb0a5aaa8f87e6a75a.tres"]
+
+[params]
+

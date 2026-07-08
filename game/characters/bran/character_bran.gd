@@ -17,12 +17,8 @@ func _on_room_set() -> void:
 
 # Called when the character is clicked
 func _on_click() -> void:
-	# Replace the call to E.command_fallback() with your own logic.
-	E.command_fallback()
-	# Example: make the player walk to this character, face them, then say a line.
-#	await C.player.walk_to_clicked()
-#	await C.player.face_clicked()
-#	await C.player.say("Hi!")
+	await C.player.walk_to_clicked()
+	DialogueManager.start_dialogue("ExhebitionBran")
 
 
 # Called when the character is double-clicked
@@ -52,11 +48,11 @@ func _on_middle_click() -> void:
 
 # Called when the character is clicked while an inventory item is selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
-	# Replace the call to E.command_fallback() with your own logic.
-	E.command_fallback()
-	# Example: if the player uses a Key on this character, make the player say something.
-#	if _item == I.Key:
-#		await C.player.say("I don't want to give my key away!")
+	await C.player.walk_to_clicked()
+	if _item == I.ItemPhioleMitGrünerFlüssigkeit:
+		DialogueManager.start_dialogue("ExhebitionBranInteraction")
+		I.ItemPhioleMitGrünerFlüssigkeit.remove()
+		I.ItemPhioleMitNervengift.add()
 
 
 # Override this to alter the idle animation or hook custom logic to it. 

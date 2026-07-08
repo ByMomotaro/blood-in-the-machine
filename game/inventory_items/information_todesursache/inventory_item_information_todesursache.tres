@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bgcth7unwsgrg"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_todesursache/inventory_item_information_todesursache_state.gd" id="1_0168w"]
+
+[resource]
+resource_name = "InformationTodesursache"
+script = ExtResource("1_0168w")
+script_name = "InformationTodesursache"
+scene = "res://game/inventory_items/information_todesursache/inventory_item_information_todesursache.tscn"

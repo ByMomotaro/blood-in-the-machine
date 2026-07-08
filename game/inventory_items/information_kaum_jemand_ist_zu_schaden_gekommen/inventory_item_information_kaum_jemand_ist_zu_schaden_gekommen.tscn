@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cy546k2hi2sh0"]
+
+[ext_resource type="Texture2D" uid="uid://bxm5b4uddxos7" path="res://game/inventory_items/information.png" id="1_ks2yj"]
+[ext_resource type="Script" uid="uid://brav8a2566tfa" path="res://game/inventory_items/information_kaum_jemand_ist_zu_schaden_gekommen/inventory_item_information_kaum_jemand_ist_zu_schaden_gekommen.gd" id="1_qkkjh"]
+
+[node name="ItemInformationKaumJemandIstZuSchadenGekommen" type="TextureRect" unique_id=2008022327]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ks2yj")
+stretch_mode = 5
+script = ExtResource("1_qkkjh")
+script_name = "InformationKaumJemandIstZuSchadenGekommen"
+description = "Kaum Jemand Ist Zu Schaden Gekommen"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=537772521]

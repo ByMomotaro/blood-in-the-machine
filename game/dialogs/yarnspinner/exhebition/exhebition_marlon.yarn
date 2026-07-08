@@ -1,0 +1,15 @@
+﻿title: ExhebitionMarlon
+tags:
+---
+Marlon: Ich untersuche die Leiche. Es scheint aber keine sichtbaren Verletzungen zu geben.
+-> Also ist er einfach tot umgefallen?
+    Marlon: Scheint so. Allerdings sind seine Gelenke total verdreht. Und siehst du das? Das sitrisysche Öl in seinen Prothesen ist seltsam grün verfärbt. Ich sage Bescheid, wenn ich noch mehr finde.
+-> Hm okay. Ich werde mich weiter umsehen. Sag Bescheid, wenn du etwas findest.
+===
+
+title: ExhebitionMarlonInteraction
+tags:
+---
+Mai: Marlon hast du schon etwas entdeckt? Gibt es vielleicht Anzeichen auf einen Selbstmord?
+Marlon: Hmm. Nein das denke ich nicht. Es gibt nichts, was darauf schließen würde.
+===

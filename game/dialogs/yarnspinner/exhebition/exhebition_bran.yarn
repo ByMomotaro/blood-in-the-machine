@@ -1,0 +1,19 @@
+﻿title: ExhebitionBran
+tags:
+---
+Bran: Ah Mai du bist da, gut!
+Mai: Was ist passiert?
+Bran: Wie es aussieht wurde der Leiter dieser Ausstellung ermordet.
+    -> Am hellichten Tage?
+         Bran: Erstaunlicherweise ja. Er ist wohl einfach Tod umgefallen. Da er sich in einer Menschenmenge befand ist unklar, was genau passiert ist. Marlon untersucht gerade die Leiche.
+            -> In Ordnung. Ich werde mich umsehen.
+    -> In Ordnung. Ich werde mich umsehen.
+        Bran: Sprich bei Gelegenheit mit Marlon.
+===
+
+title: ExhebitionBranInteraction
+tags:
+---
+Mai: Guck mal Bran. Hast du eine Idee, was das sein könnte?
+Bran: Hmm. Das scheint irgendeine Flüssigkeit zu sein, die sitrisyschem Öl ähnelt. Ich bin mir sicher, dass es sich dabei um eine Art Nervengift handeln muss!
+===

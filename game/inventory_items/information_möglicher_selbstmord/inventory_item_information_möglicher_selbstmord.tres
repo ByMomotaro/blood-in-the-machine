@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blvyp5ns5aita"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_möglicher_selbstmord/inventory_item_information_möglicher_selbstmord_state.gd" id="1_xt207"]
+
+[resource]
+resource_name = "InformationMöglicherSelbstmord"
+script = ExtResource("1_xt207")
+script_name = "InformationMöglicherSelbstmord"
+scene = "res://game/inventory_items/information_möglicher_selbstmord/inventory_item_information_möglicher_selbstmord.tscn"

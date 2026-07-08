@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d1rsbqb3kb1eg"]
+
+[ext_resource type="Script" uid="uid://ba87oro1yyhkf" path="res://game/inventory_items/item_phiole_mit_grüner_flüssigkeit/inventory_item_item_phiole_mit_grüner_flüssigkeit.gd" id="1_8u3mb"]
+[ext_resource type="Texture2D" uid="uid://bi8ibqmgw4wg7" path="res://game/inventory_items/item_phiole_mit_grüner_flüssigkeit/item_phiole_mit_grüner_flüssigkeit.png" id="1_m41ja"]
+
+[node name="ItemItemPhioleMitGrünerFlüssigkeit" type="TextureRect" unique_id=1118400249]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_m41ja")
+stretch_mode = 5
+script = ExtResource("1_8u3mb")
+script_name = "ItemPhioleMitGrünerFlüssigkeit"
+description = "Phiole Mit Grüner Flüssigkeit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=232313555]

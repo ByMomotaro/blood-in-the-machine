@@ -17,8 +17,8 @@ func _on_room_set() -> void:
 
 # Called when the character is clicked
 func _on_click() -> void:
-	pass
-
+	await C.player.walk_to_clicked()
+	DialogueManager.start_dialogue("ExhebitionPyrSoldierB")
 
 # Called when the character is double-clicked
 func _on_double_click() -> void:

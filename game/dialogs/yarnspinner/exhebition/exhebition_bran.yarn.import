@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://bdot0ax60i4tt"
+path="res://.godot/imported/exhebition_bran.yarn-6e840603193ad05b043203d9ba99f693.tres"
+
+[deps]
+
+source_file="res://game/dialogs/yarnspinner/exhebition/exhebition_bran.yarn"
+dest_files=["res://.godot/imported/exhebition_bran.yarn-6e840603193ad05b043203d9ba99f693.tres"]
+
+[params]
+

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b6b56lr8ftvxi"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_es_muss_eine_andere_erklärung_geben/inventory_item_information_es_muss_eine_andere_erklärung_geben_state.gd" id="1_obk7l"]
+
+[resource]
+resource_name = "InformationEsMussEineAndereErklärungGeben"
+script = ExtResource("1_obk7l")
+script_name = "InformationEsMussEineAndereErklärungGeben"
+scene = "res://game/inventory_items/information_es_muss_eine_andere_erklärung_geben/inventory_item_information_es_muss_eine_andere_erklärung_geben.tscn"

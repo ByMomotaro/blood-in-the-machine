@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dtyvpu666r6k8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/item_phiole_mit_grüner_flüssigkeit/inventory_item_item_phiole_mit_grüner_flüssigkeit_state.gd" id="1_ixc0a"]
+
+[resource]
+resource_name = "ItemPhioleMitGrünerFlüssigkeit"
+script = ExtResource("1_ixc0a")
+script_name = "ItemPhioleMitGrünerFlüssigkeit"
+scene = "res://game/inventory_items/item_phiole_mit_grüner_flüssigkeit/inventory_item_item_phiole_mit_grüner_flüssigkeit.tscn"

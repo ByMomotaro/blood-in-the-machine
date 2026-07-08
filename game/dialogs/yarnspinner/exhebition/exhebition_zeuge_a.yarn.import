@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://dxx5oooyvjs1l"
+path="res://.godot/imported/exhebition_zeuge_a.yarn-b5023b9d5d5f77ca35ca09ad2ab506e1.tres"
+
+[deps]
+
+source_file="res://game/dialogs/yarnspinner/exhebition/exhebition_zeuge_a.yarn"
+dest_files=["res://.godot/imported/exhebition_zeuge_a.yarn-b5023b9d5d5f77ca35ca09ad2ab506e1.tres"]
+
+[params]
+

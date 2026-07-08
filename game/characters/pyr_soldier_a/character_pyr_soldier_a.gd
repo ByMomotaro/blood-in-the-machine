@@ -20,6 +20,7 @@ func _on_room_set() -> void:
 func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	DialogueManager.start_dialogue("ExhebitionPyrSoldierA")
+	I.InformationKaumJemandIstZuSchadenGekommen.add()
 
 # Called when the character is double-clicked
 func _on_double_click() -> void:

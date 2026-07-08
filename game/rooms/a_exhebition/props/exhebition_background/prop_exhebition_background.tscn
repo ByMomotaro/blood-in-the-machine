@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://uopmv5rpwwbc"]
+[gd_scene format=3 uid="uid://cpuuk5dj614es"]
 
-[ext_resource type="Script" uid="uid://c8rw501q3c1o" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.gd" id="1_y3ybf"]
-[ext_resource type="Texture2D" uid="uid://bgwg7fpovvpla" path="res://game/rooms/a_exhebition/props/exhebition_background/Exhebition Background.png" id="2_6pthk"]
+[ext_resource type="Script" uid="uid://dpwhwe3pb2pj0" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.gd" id="1_y3ybf"]
+[ext_resource type="Texture2D" uid="uid://5g5wuueswvby" path="res://game/rooms/a_exhebition/props/exhebition_background/Exhebition Background.png" id="2_6pthk"]
 
 [sub_resource type="Animation" id="Animation_6pthk"]
 length = 1.2
@@ -60,38 +60,33 @@ _data = {
 &"exhebition_background": SubResource("Animation_6pthk")
 }
 
-[node name="ExhebitionBackground" type="Area2D" unique_id=579433237]
+[node name="ExhebitionBackground" type="Area2D" unique_id=1315943455]
 position = Vector2(160, 90)
-input_pickable = false
 script = ExtResource("1_y3ybf")
 obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
 script_name = "ExhebitionBackground"
 description = "Exhebition Background"
-clickable = false
-baseline = -45
-walk_to_point = Vector2(-36.310936, -34.106716)
-look_at_point = Vector2(-18.394836, -51.843483)
 cursor = 1
-interaction_polygon = PackedVector2Array(-160, -90, 160, -90, 160, 90, -160, 90)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 metadata/ANIM_NAME = "Exhebition Background"
 metadata/ANIM_AUTOPLAY = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=575501602]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=795848994]
 texture_filter = 1
 texture = ExtResource("2_6pthk")
 hframes = 3
 vframes = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2069218694]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1029718491]
 libraries/ = SubResource("AnimationLibrary_ar01n")
 autoplay = &"exhebition_background"
 
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1880915544]
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1165875121]
 visible = false
 modulate = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(-160, -90, 160, -90, 160, 90, -160, 90)
 
-[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1175445821]
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=2075486152]
 visible = false
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 affect_navigation_mesh = true

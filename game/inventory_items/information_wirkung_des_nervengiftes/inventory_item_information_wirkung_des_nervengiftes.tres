@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://de0l2pc171xci"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_wirkung_des_nervengiftes/inventory_item_information_wirkung_des_nervengiftes_state.gd" id="1_owddl"]
+
+[resource]
+resource_name = "InformationWirkungDesNervengiftes"
+script = ExtResource("1_owddl")
+script_name = "InformationWirkungDesNervengiftes"
+scene = "res://game/inventory_items/information_wirkung_des_nervengiftes/inventory_item_information_wirkung_des_nervengiftes.tscn"

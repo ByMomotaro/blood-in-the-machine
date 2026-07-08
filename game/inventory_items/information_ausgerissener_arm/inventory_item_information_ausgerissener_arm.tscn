@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cuonv0sqhbiqf"]
+
+[ext_resource type="Texture2D" uid="uid://bxm5b4uddxos7" path="res://game/inventory_items/information.png" id="1_n1t2j"]
+[ext_resource type="Script" uid="uid://dfm5ni32hckir" path="res://game/inventory_items/information_ausgerissener_arm/inventory_item_information_ausgerissener_arm.gd" id="1_s02jo"]
+
+[node name="ItemInformationAusgerissenerArm" type="TextureRect" unique_id=548558090]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_n1t2j")
+stretch_mode = 5
+script = ExtResource("1_s02jo")
+script_name = "InformationAusgerissenerArm"
+description = "Ausgerissener Arm"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=396854030]

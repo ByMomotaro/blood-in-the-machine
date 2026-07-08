@@ -2,13 +2,18 @@
 
 [ext_resource type="Script" uid="uid://tbx4emstpitm" path="res://game/rooms/a_exhebition/room_a_exhebition.gd" id="1_s1l0i"]
 [ext_resource type="PackedScene" uid="uid://c35n1wwvbr14j" path="res://game/rooms/a_exhebition/walkable_areas/exhebition_floor/walkable_area_exhebition_floor.tscn" id="2_mxvnd"]
-[ext_resource type="PackedScene" uid="uid://uopmv5rpwwbc" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.tscn" id="3_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://cpuuk5dj614es" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.tscn" id="3_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://c0nmuap7uvp6y" path="res://game/rooms/a_exhebition/hotspots/leiche/hotspot_leiche.tscn" id="4_a1p2r"]
 [ext_resource type="PackedScene" uid="uid://dcfkalgkgd7vf" path="res://game/rooms/a_exhebition/regions/exhebition_scaling/region_exhebition_scaling.tscn" id="4_c4h0o"]
 [ext_resource type="PackedScene" uid="uid://bcxxpc81vc02k" path="res://game/rooms/a_exhebition/markers/exhebition_starting_position/marker_exhebition_starting_position.tscn" id="4_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://b3hgt34bda5ca" path="res://game/rooms/a_exhebition/hotspots/umgebung_des_tatorts/hotspot_umgebung_des_tatorts.tscn" id="5_y331v"]
+[ext_resource type="PackedScene" uid="uid://1mimimm0efaa" path="res://game/rooms/a_exhebition/hotspots/ausstellung/hotspot_ausstellung.tscn" id="6_1c3aw"]
 [ext_resource type="PackedScene" uid="uid://cl0egxogep1mi" path="res://game/characters/pyr_soldier_a/character_pyr_soldier_a.tscn" id="6_xyw8r"]
 [ext_resource type="PackedScene" uid="uid://dcd3wlnwl8b24" path="res://game/characters/pyr_soldier_b/character_pyr_soldier_b.tscn" id="7_5evls"]
 [ext_resource type="PackedScene" uid="uid://b372yokjyfxai" path="res://game/characters/marlon/character_marlon.tscn" id="8_4o28c"]
 [ext_resource type="PackedScene" uid="uid://i3lb6pdcvak" path="res://game/characters/bran/character_bran.tscn" id="9_phkmk"]
+[ext_resource type="PackedScene" uid="uid://cpb6273a1rbih" path="res://game/characters/zeuge_a/character_zeuge_a.tscn" id="10_ctisj"]
+[ext_resource type="PackedScene" uid="uid://ciaspmsxnydlu" path="res://game/characters/zeuge_b/character_zeuge_b.tscn" id="11_dw1e3"]
 
 [node name="RoomAExhebition" type="Node2D" unique_id=1581114510]
 script = ExtResource("1_s1l0i")
@@ -28,7 +33,7 @@ metadata/_popochiu_aseprite_config_ = {
 "prop_clickable": true,
 "prop_visible": true,
 "tag_name": "Exhebition Background",
-&"to": 15.0
+&"to": 17.0
 }],
 "tags_exp": true,
 "wipe_old_anims": true
@@ -37,12 +42,33 @@ metadata/_popochiu_aseprite_config_ = {
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=999099349]
 
 [node name="ExhebitionFloor" parent="WalkableAreas" unique_id=1182288145 instance=ExtResource("2_mxvnd")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-102.40617, -21.91867, -92.754074, -22.079838, -100.67551, -12.907503, -91.917046, -12.606508, -97.50053, -2.797058, -99.17515, 14.385063, -102.8728, 25.216728, -92.50375, 33.870804, -87.02224, 41.100723, -74.84534, 56.307297, -56.73948, 77.846664, -1.2967453, 83.457565, 37.38449, 83.25452, 45.96779, 74.50888, 100.316414, 74.39839, 101.47649, 49.83776, 58.4141, 20.673698, 60.568634, 5.831398, 53.64384, -4.016033, 39.29861, -7.1832237, 98.727165, -8.634388, 152.11362, 6.3683243, 150.16106, 89.28197, -76.6678, 89.89977, -89.0944, 83.195946, -128.00928, 83.03244, -149.0227, 89.382164, -153.38162, -8.840967)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1157241702]
 
-[node name="ExhebitionBackground" parent="Props" unique_id=579433237 instance=ExtResource("3_mxvnd")]
+[node name="ExhebitionBackground" parent="Props" unique_id=1315943455 instance=ExtResource("3_mxvnd")]
+baseline = -44
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=730448852]
+
+[node name="Leiche" parent="Hotspots" unique_id=86434025 instance=ExtResource("4_a1p2r")]
+position = Vector2(123, 154)
+walk_to_point = Vector2(-18.999603, 13.90152)
+look_at_point = Vector2(10.949417, -1.4864807)
+interaction_polygon = PackedVector2Array(-5.4533234, -12.748268, 2.5856552, -30.932713, 31.003342, -31.29243, 44.83187, -5.762516, 39.04837, 3.7525482, 5.643257, 14.2118225, -18.098099, 10.434799, -25.54583, 1.9472504)
+
+[node name="UmgebungDesTatorts" parent="Hotspots" unique_id=1603401573 instance=ExtResource("5_y331v")]
+position = Vector2(103, 113)
+baseline = -2
+walk_to_point = Vector2(-21.003326, 12.899567)
+look_at_point = Vector2(5.409996, -3.6669922)
+interaction_polygon = PackedVector2Array(-37.86399, -14.675587, -3.5481186, -18.897066, 3.7547913, -2.6120453, -4.7077026, 17.82072, -4.508095, 38.77077, -36.06513, 37.953228, -41.460888, 4.5976143)
+
+[node name="Ausstellung" parent="Hotspots" unique_id=1614007129 instance=ExtResource("6_1c3aw")]
+position = Vector2(185, 102)
+walk_to_point = Vector2(37.669403, 6.525879)
+look_at_point = Vector2(-5.3900757, -2.0291672)
+interaction_polygon = PackedVector2Array(-34.89111, -24.917126, -7.130432, -19.03084, 18.473343, 9.931252, 8.923813, 22.209702, -15.219467, 24.024872, -42.184895, 5.218796, -43.14178, -10.512409)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1336164066]
 
@@ -78,3 +104,11 @@ metadata/EDITOR_TMP_COPY_OF = "Marlon"
 [node name="CharacterBran *" parent="Characters" unique_id=1931362782 instance=ExtResource("9_phkmk")]
 position = Vector2(50, 180)
 metadata/EDITOR_TMP_COPY_OF = "Bran"
+
+[node name="CharacterZeugeA *" parent="Characters" unique_id=2038289548 instance=ExtResource("10_ctisj")]
+position = Vector2(215, 81)
+metadata/EDITOR_TMP_COPY_OF = "ZeugeA"
+
+[node name="CharacterZeugeB *" parent="Characters" unique_id=524496943 instance=ExtResource("11_dw1e3")]
+position = Vector2(234, 82)
+metadata/EDITOR_TMP_COPY_OF = "ZeugeB"

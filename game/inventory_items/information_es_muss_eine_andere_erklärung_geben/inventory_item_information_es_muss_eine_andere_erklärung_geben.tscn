@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d3ekkmwdlkxqy"]
+
+[ext_resource type="Texture2D" uid="uid://bxm5b4uddxos7" path="res://game/inventory_items/information.png" id="1_8vbq8"]
+[ext_resource type="Script" uid="uid://cxley0i4jbdyn" path="res://game/inventory_items/information_es_muss_eine_andere_erklärung_geben/inventory_item_information_es_muss_eine_andere_erklärung_geben.gd" id="1_y06mm"]
+
+[node name="ItemInformationEsMussEineAndereErklärungGeben" type="TextureRect" unique_id=487465583]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8vbq8")
+stretch_mode = 5
+script = ExtResource("1_y06mm")
+script_name = "InformationEsMussEineAndereErklärungGeben"
+description = "Es Muss Eine Andere Erklärung Geben"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=603629940]

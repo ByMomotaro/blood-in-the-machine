@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://co7v3sk7x58t4"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_ausgerissener_arm/inventory_item_information_ausgerissener_arm_state.gd" id="1_fw1fu"]
+
+[resource]
+resource_name = "InformationAusgerissenerArm"
+script = ExtResource("1_fw1fu")
+script_name = "InformationAusgerissenerArm"
+scene = "res://game/inventory_items/information_ausgerissener_arm/inventory_item_information_ausgerissener_arm.tscn"
