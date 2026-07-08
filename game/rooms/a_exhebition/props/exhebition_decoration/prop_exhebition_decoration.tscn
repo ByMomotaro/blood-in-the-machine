@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://db1ubg57a5jhc"]
+
+[ext_resource type="Script" path="res://game/rooms/a_exhebition/props/exhebition_decoration/prop_exhebition_decoration.gd" id="1_wubei"]
+
+[node name="ExhebitionDecoration" type="Area2D" unique_id=1339400633]
+input_pickable = false
+script = ExtResource("1_wubei")
+script_name = "ExhebitionDecoration"
+description = "Exhebition Decoration"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1915883842]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2035970313]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=658069573]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=844752311]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

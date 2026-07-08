@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bd2764tvswb8x"]
+
+[ext_resource type="Script" path="res://game/rooms/cutscene_one/room_cutscene_one_state.gd" id="1_c74vr"]
+
+[resource]
+resource_name = "CutsceneOne"
+script = ExtResource("1_c74vr")
+script_name = "CutsceneOne"
+scene = "res://game/rooms/cutscene_one/room_cutscene_one.tscn"

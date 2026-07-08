@@ -96,14 +96,14 @@ func _play_grab() -> void:
 # Implement any logic you want to trigger at the start of movement here.
 # For example, you could play a sound effect or make something happen in the room.
 func _on_movement_started() -> void:
-	pass
+	SoundManager.play_sfx("walking")
 
 
 # Called when the character stops moving
 # Implement any logic you want to trigger at the start of movement here.
 # For example, you could play a sound effect or make something happen in the room.
 func _on_movement_ended() -> void:
-	pass
+	SoundManager.stop_sfx("walking")
 
 
 #endregion

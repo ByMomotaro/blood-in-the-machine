@@ -62,12 +62,15 @@ _data = {
 
 [node name="ExhebitionBackground" type="Area2D" unique_id=1315943455]
 position = Vector2(160, 90)
+input_pickable = false
 script = ExtResource("1_y3ybf")
 obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
 script_name = "ExhebitionBackground"
 description = "Exhebition Background"
+clickable = false
+baseline = -44
 cursor = 1
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(-160, -90, 160, -90, 160, 90, -160, 90)
 metadata/ANIM_NAME = "Exhebition Background"
 metadata/ANIM_AUTOPLAY = true
 

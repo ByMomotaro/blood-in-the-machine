@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://tbx4emstpitm" path="res://game/rooms/a_exhebition/room_a_exhebition.gd" id="1_s1l0i"]
 [ext_resource type="PackedScene" uid="uid://c35n1wwvbr14j" path="res://game/rooms/a_exhebition/walkable_areas/exhebition_floor/walkable_area_exhebition_floor.tscn" id="2_mxvnd"]
 [ext_resource type="PackedScene" uid="uid://cpuuk5dj614es" path="res://game/rooms/a_exhebition/props/exhebition_background/prop_exhebition_background.tscn" id="3_mxvnd"]
+[ext_resource type="PackedScene" uid="uid://db1ubg57a5jhc" path="res://game/rooms/a_exhebition/props/exhebition_decoration/prop_exhebition_decoration.tscn" id="4_4m2pf"]
 [ext_resource type="PackedScene" uid="uid://c0nmuap7uvp6y" path="res://game/rooms/a_exhebition/hotspots/leiche/hotspot_leiche.tscn" id="4_a1p2r"]
 [ext_resource type="PackedScene" uid="uid://dcfkalgkgd7vf" path="res://game/rooms/a_exhebition/regions/exhebition_scaling/region_exhebition_scaling.tscn" id="4_c4h0o"]
 [ext_resource type="PackedScene" uid="uid://bcxxpc81vc02k" path="res://game/rooms/a_exhebition/markers/exhebition_starting_position/marker_exhebition_starting_position.tscn" id="4_mxvnd"]
+[ext_resource type="Texture2D" uid="uid://dxjy73wos2naa" path="res://game/rooms/a_exhebition/props/exhebition_decoration/exhebition_decoration.png" id="5_pe4ym"]
 [ext_resource type="PackedScene" uid="uid://b3hgt34bda5ca" path="res://game/rooms/a_exhebition/hotspots/umgebung_des_tatorts/hotspot_umgebung_des_tatorts.tscn" id="5_y331v"]
 [ext_resource type="PackedScene" uid="uid://1mimimm0efaa" path="res://game/rooms/a_exhebition/hotspots/ausstellung/hotspot_ausstellung.tscn" id="6_1c3aw"]
 [ext_resource type="PackedScene" uid="uid://cl0egxogep1mi" path="res://game/characters/pyr_soldier_a/character_pyr_soldier_a.tscn" id="6_xyw8r"]
@@ -33,7 +35,7 @@ metadata/_popochiu_aseprite_config_ = {
 "prop_clickable": true,
 "prop_visible": true,
 "tag_name": "Exhebition Background",
-&"to": 17.0
+&"to": 18.0
 }],
 "tags_exp": true,
 "wipe_old_anims": true
@@ -42,12 +44,19 @@ metadata/_popochiu_aseprite_config_ = {
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=999099349]
 
 [node name="ExhebitionFloor" parent="WalkableAreas" unique_id=1182288145 instance=ExtResource("2_mxvnd")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-102.40617, -21.91867, -92.754074, -22.079838, -100.67551, -12.907503, -91.917046, -12.606508, -97.50053, -2.797058, -99.17515, 14.385063, -102.8728, 25.216728, -92.50375, 33.870804, -87.02224, 41.100723, -74.84534, 56.307297, -56.73948, 77.846664, -1.2967453, 83.457565, 37.38449, 83.25452, 45.96779, 74.50888, 100.316414, 74.39839, 101.47649, 49.83776, 58.4141, 20.673698, 60.568634, 5.831398, 53.64384, -4.016033, 39.29861, -7.1832237, 98.727165, -8.634388, 152.11362, 6.3683243, 150.16106, 89.28197, -76.6678, 89.89977, -89.0944, 83.195946, -128.00928, 83.03244, -149.0227, 89.382164, -153.38162, -8.840967)])
 
 [node name="Props" type="Node2D" parent="." unique_id=1157241702]
 
 [node name="ExhebitionBackground" parent="Props" unique_id=1315943455 instance=ExtResource("3_mxvnd")]
-baseline = -44
+
+[node name="ExhebitionDecoration" parent="Props" unique_id=1339400633 instance=ExtResource("4_4m2pf")]
+y_sort_enabled = true
+position = Vector2(209, 112)
+texture = ExtResource("5_pe4ym")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+baseline = 26
+look_at_point = Vector2(24.5262, 29.877373)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=730448852]
 
@@ -81,7 +90,7 @@ interaction_polygon = PackedVector2Array(-9.793651, -107.68859, 309.4023, -107.7
 [node name="Markers" type="Node2D" parent="." unique_id=2020060823]
 
 [node name="ExhebitionStartingPosition" parent="Markers" unique_id=1326526914 instance=ExtResource("4_mxvnd")]
-position = Vector2(271.79105, 116.45152)
+position = Vector2(110.24528, 174.44234)
 
 [node name="Characters" type="Node2D" parent="." unique_id=112454632]
 

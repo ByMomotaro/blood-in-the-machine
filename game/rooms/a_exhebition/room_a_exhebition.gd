@@ -14,6 +14,8 @@ var state: Data = load("res://game/rooms/a_exhebition/room_a_exhebition.tres")
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
 	C.player.position = starting_position.position
+	if !SoundManager.music_player.playing or !SoundManager.current_theme == "theme":
+		SoundManager.play_music("theme")
 
 # Called after the room transition completes; the room is now visible.
 # Implement this to start cutscenes, play sounds, etc.
@@ -21,12 +23,11 @@ func _on_room_transition_finished() -> void:
 	# You can use await E.queue([]) to run a sequence of actions here.
 	pass
 
-
 # Called before Popochiu unloads the room.
 # At this point the screen is black, processing is disabled, and characters
 # have been removed from the $Characters node.
 # Implement cleanup code, handle custom data or states before leaving the room, etc. if needed.
 func _on_room_exited() -> void:
-	pass
+	starting_position.position = C.player.position
 
 #endregion

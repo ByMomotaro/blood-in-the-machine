@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b05dmqe2roi40"]
+
+[ext_resource type="Script" path="res://game/rooms/a_dead_body/props/dead_body_arm/prop_dead_body_arm.gd" id="1_lxf0d"]
+
+[node name="DeadBodyArm" type="Area2D" unique_id=59642142]
+input_pickable = false
+script = ExtResource("1_lxf0d")
+script_name = "DeadBodyArm"
+description = "Dead Body Arm"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886457027]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1410531649]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=500563321]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1190358904]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

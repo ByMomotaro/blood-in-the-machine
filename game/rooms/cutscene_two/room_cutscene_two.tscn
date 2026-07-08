@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://lsst5d0athtw"]
+
+[ext_resource type="Script" uid="uid://l51ojmlyb47t" path="res://game/rooms/cutscene_two/room_cutscene_two.gd" id="1_1oqxv"]
+[ext_resource type="PackedScene" uid="uid://c2rvte514n15q" path="res://game/rooms/cutscene_two/props/cutscene_two_background/prop_cutscene_two_background.tscn" id="2_ba1er"]
+[ext_resource type="Texture2D" uid="uid://yxci7b3y7x8a" path="res://game/rooms/cutscene_two/cutscene_two_background.png" id="3_mrhjh"]
+
+[node name="RoomCutsceneTwo" type="Node2D" unique_id=1940322049]
+script = ExtResource("1_1oqxv")
+script_name = "CutsceneTwo"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1100295780]
+
+[node name="Props" type="Node2D" parent="." unique_id=656762228]
+
+[node name="CutsceneTwoBackground" parent="Props" unique_id=1657962612 instance=ExtResource("2_ba1er")]
+position = Vector2(160, 90)
+texture = ExtResource("3_mrhjh")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=111823508]
+
+[node name="Regions" type="Node2D" parent="." unique_id=100565896]
+
+[node name="Markers" type="Node2D" parent="." unique_id=13891272]
+
+[node name="Characters" type="Node2D" parent="." unique_id=2005439060]

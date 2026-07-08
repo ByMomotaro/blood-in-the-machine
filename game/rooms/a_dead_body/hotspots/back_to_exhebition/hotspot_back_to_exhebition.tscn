@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dhw822by76yfj"]
+
+[ext_resource type="Script" path="res://game/rooms/a_dead_body/hotspots/back_to_exhebition/hotspot_back_to_exhebition.gd" id="1_qsnfn"]
+
+[node name="BackToExhebition" type="Area2D" unique_id=789073554]
+script = ExtResource("1_qsnfn")
+script_name = "BackToExhebition"
+description = "Back To Exhebition"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=535762366]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

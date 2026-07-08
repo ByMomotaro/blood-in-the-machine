@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cic40j2xkd13y"]
+
+[ext_resource type="Script" path="res://game/rooms/a_dead_body/room_a_dead_body_state.gd" id="1_7gkka"]
+
+[resource]
+resource_name = "ADeadBody"
+script = ExtResource("1_7gkka")
+script_name = "ADeadBody"
+scene = "res://game/rooms/a_dead_body/room_a_dead_body.tscn"

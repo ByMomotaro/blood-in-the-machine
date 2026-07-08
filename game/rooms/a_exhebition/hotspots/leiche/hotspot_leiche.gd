@@ -8,7 +8,8 @@ extends PopochiuHotspot
 #region Virtual ####################################################################################
 # When the hotspot is clicked
 func _on_click() -> void:
-	PopochiuUtils.e.command_fallback()
+	await C.player.walk_to_clicked()
+	R.goto_room("ADeadBody")
 
 
 # Called when the hotspot is double-clicked
@@ -37,11 +38,7 @@ func _on_middle_click() -> void:
 
 # Called when the hotspot is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
-	if _item == I.InformationAusgerissenerArm:
-		await C.player.walk_to_clicked()
-		await C.player.say("Das ist aber merkwürdig. Warum ist diese zerstörte Prothese grün verfärbt?")
-		I.InformationAusgerissenerArm.remove()
-		I.ItemArmDesZeugen.add()
+	pass
 
 
 # Called when the hotspot starts moving

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bewi6rsvjn5lo"]
+
+[ext_resource type="Script" uid="uid://bpf85kuvrko6" path="res://game/rooms/a_dead_body/room_a_dead_body.gd" id="1_dhdve"]
+[ext_resource type="PackedScene" uid="uid://dhw822by76yfj" path="res://game/rooms/a_dead_body/hotspots/back_to_exhebition/hotspot_back_to_exhebition.tscn" id="2_c88u6"]
+[ext_resource type="PackedScene" uid="uid://h0hqvophgyqh" path="res://game/rooms/a_dead_body/props/dead_body_background/prop_dead_body_background.tscn" id="2_vq8dj"]
+[ext_resource type="PackedScene" uid="uid://b05dmqe2roi40" path="res://game/rooms/a_dead_body/props/dead_body_arm/prop_dead_body_arm.tscn" id="3_d2uhx"]
+[ext_resource type="Texture2D" uid="uid://dffvhto3w3x21" path="res://game/rooms/a_dead_body/props/dead_body_background/DeadBodyBackground.png" id="3_li6ku"]
+[ext_resource type="Texture2D" uid="uid://bh8p3syl6ervy" path="res://game/rooms/a_dead_body/props/dead_body_arm/DeadBodyArm.png" id="5_5ny2i"]
+[ext_resource type="PackedScene" uid="uid://bt6t855ls1vn2" path="res://game/rooms/a_dead_body/hotspots/arm_des_zeugen/hotspot_arm_des_zeugen.tscn" id="7_5ny2i"]
+
+[node name="RoomADeadBody" type="Node2D" unique_id=2097483407]
+script = ExtResource("1_dhdve")
+script_name = "ADeadBody"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1329501856]
+
+[node name="Props" type="Node2D" parent="." unique_id=1217917935]
+
+[node name="DeadBodyBackground" parent="Props" unique_id=1930071077 instance=ExtResource("2_vq8dj")]
+position = Vector2(160, 90)
+texture = ExtResource("3_li6ku")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="DeadBodyArm" parent="Props" unique_id=59642142 instance=ExtResource("3_d2uhx")]
+position = Vector2(160, 90)
+texture = ExtResource("5_5ny2i")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+look_at_point = Vector2(-1.3166504, 0.26335144)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1938157235]
+
+[node name="BackToExhebition" parent="Hotspots" unique_id=789073554 instance=ExtResource("2_c88u6")]
+position = Vector2(160, 90)
+interaction_polygon = PackedVector2Array(-158.14026, -87.727875, -136.76605, -87.89882, -136.3805, 69.78838, 134.47159, 70.25806, 134.85709, -88.200195, 158.3128, -87.93878, 158.44835, 90.064514, -157.32349, 87.84145)
+
+[node name="ArmDesZeugen" parent="Hotspots" unique_id=1263033268 instance=ExtResource("7_5ny2i")]
+position = Vector2(160, 90)
+interaction_polygon = PackedVector2Array(8.1441765, 32.604965, 42.21627, 12.10107, 64.87847, 34.12262, 28.648071, 58.583412)
+
+[node name="Regions" type="Node2D" parent="." unique_id=209650938]
+
+[node name="Markers" type="Node2D" parent="." unique_id=251420882]
+
+[node name="Characters" type="Node2D" parent="." unique_id=271622756]
