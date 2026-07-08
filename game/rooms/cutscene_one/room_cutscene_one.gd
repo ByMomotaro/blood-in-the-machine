@@ -8,12 +8,18 @@ var state: Data = load("res://game/rooms/cutscene_one/room_cutscene_one.tres")
 
 
 #region Virtual ####################################################################################
+func _process(delta: float) -> void:
+	if Input.is_anything_pressed():
+		R.goto_room("AExhebition")
+
+
 # Called when Popochiu loads the room. At this point the room is in the scene tree but not yet
 # visible.
 # Add any code you want to setup the stage before the room is shown to the player (e.g. setting
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
-	pass
+	C.player.visible = false
+	C.player.can_move = false
 
 
 # Called after the room transition completes; the room is now visible.

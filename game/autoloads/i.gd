@@ -12,9 +12,9 @@ const PIIInformationTodesursache := preload("res://game/inventory_items/informat
 const PIIInformationErgebnisDerAutopsie := preload("res://game/inventory_items/information_ergebnis_der_autopsie/inventory_item_information_ergebnis_der_autopsie.gd")
 const PIIInformationMöglicherSelbstmord := preload("res://game/inventory_items/information_möglicher_selbstmord/inventory_item_information_möglicher_selbstmord.gd")
 const PIIInformationWirkungDesNervengiftes := preload("res://game/inventory_items/information_wirkung_des_nervengiftes/inventory_item_information_wirkung_des_nervengiftes.gd")
-const PIIInformationDerArmDesZeugenIstEbenfallsVergiftet := preload("res://game/inventory_items/information_der_arm_des_zeugen_ist_ebenfalls_vergiftet/inventory_item_information_der_arm_des_zeugen_ist_ebenfalls_vergiftet.gd")
 const PIIInformationKaumJemandIstZuSchadenGekommen := preload("res://game/inventory_items/information_kaum_jemand_ist_zu_schaden_gekommen/inventory_item_information_kaum_jemand_ist_zu_schaden_gekommen.gd")
 const PIIInformationEsMussEineAndereErklärungGeben := preload("res://game/inventory_items/information_es_muss_eine_andere_erklärung_geben/inventory_item_information_es_muss_eine_andere_erklärung_geben.gd")
+const PIIInformationArmZeugeVergiftet := preload("res://game/inventory_items/information_arm_zeuge_vergiftet/inventory_item_information_arm_zeuge_vergiftet.gd")
 # ---- classes
 
 # nodes ----
@@ -28,9 +28,9 @@ var InformationTodesursache: PIIInformationTodesursache : get = get_InformationT
 var InformationErgebnisDerAutopsie: PIIInformationErgebnisDerAutopsie : get = get_InformationErgebnisDerAutopsie
 var InformationMöglicherSelbstmord: PIIInformationMöglicherSelbstmord : get = get_InformationMöglicherSelbstmord
 var InformationWirkungDesNervengiftes: PIIInformationWirkungDesNervengiftes : get = get_InformationWirkungDesNervengiftes
-var InformationDerArmDesZeugenIstEbenfallsVergiftet: PIIInformationDerArmDesZeugenIstEbenfallsVergiftet : get = get_InformationDerArmDesZeugenIstEbenfallsVergiftet
 var InformationKaumJemandIstZuSchadenGekommen: PIIInformationKaumJemandIstZuSchadenGekommen : get = get_InformationKaumJemandIstZuSchadenGekommen
 var InformationEsMussEineAndereErklärungGeben: PIIInformationEsMussEineAndereErklärungGeben : get = get_InformationEsMussEineAndereErklärungGeben
+var InformationArmZeugeVergiftet: PIIInformationArmZeugeVergiftet : get = get_InformationArmZeugeVergiftet
 # ---- nodes
 
 # functions ----
@@ -44,7 +44,7 @@ func get_InformationTodesursache() -> PIIInformationTodesursache: return get_ite
 func get_InformationErgebnisDerAutopsie() -> PIIInformationErgebnisDerAutopsie: return get_item_instance("InformationErgebnisDerAutopsie")
 func get_InformationMöglicherSelbstmord() -> PIIInformationMöglicherSelbstmord: return get_item_instance("InformationMöglicherSelbstmord")
 func get_InformationWirkungDesNervengiftes() -> PIIInformationWirkungDesNervengiftes: return get_item_instance("InformationWirkungDesNervengiftes")
-func get_InformationDerArmDesZeugenIstEbenfallsVergiftet() -> PIIInformationDerArmDesZeugenIstEbenfallsVergiftet: return get_item_instance("InformationDerArmDesZeugenIstEbenfallsVergiftet")
 func get_InformationKaumJemandIstZuSchadenGekommen() -> PIIInformationKaumJemandIstZuSchadenGekommen: return get_item_instance("InformationKaumJemandIstZuSchadenGekommen")
 func get_InformationEsMussEineAndereErklärungGeben() -> PIIInformationEsMussEineAndereErklärungGeben: return get_item_instance("InformationEsMussEineAndereErklärungGeben")
+func get_InformationArmZeugeVergiftet() -> PIIInformationArmZeugeVergiftet: return get_item_instance("InformationArmZeugeVergiftet")
 # ---- functions

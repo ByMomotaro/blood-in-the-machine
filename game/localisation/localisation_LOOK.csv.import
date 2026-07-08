@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://btu4mbeucmrqk"
+
+[deps]
+
+files=["res://game/localisation/localisation_LOOK.de.translation", "res://game/localisation/localisation_LOOK.en.translation"]
+
+source_file="res://game/localisation/localisation_LOOK.csv"
+dest_files=["res://game/localisation/localisation_LOOK.de.translation", "res://game/localisation/localisation_LOOK.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

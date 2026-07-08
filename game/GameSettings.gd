@@ -1,6 +1,6 @@
 extends Node
 
-const DEFAULT_LANGUAGE := "de-DE"
+const DEFAULT_LANGUAGE := "de"
 
 var language := DEFAULT_LANGUAGE
 

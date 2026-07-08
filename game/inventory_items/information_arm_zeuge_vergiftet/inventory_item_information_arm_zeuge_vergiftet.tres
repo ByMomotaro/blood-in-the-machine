@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bycktwi8tnd1d"]
+
+[ext_resource type="Script" path="res://game/inventory_items/information_arm_zeuge_vergiftet/inventory_item_information_arm_zeuge_vergiftet_state.gd" id="1_r63lp"]
+
+[resource]
+resource_name = "InformationArmZeugeVergiftet"
+script = ExtResource("1_r63lp")
+script_name = "InformationArmZeugeVergiftet"
+scene = "res://game/inventory_items/information_arm_zeuge_vergiftet/inventory_item_information_arm_zeuge_vergiftet.tscn"

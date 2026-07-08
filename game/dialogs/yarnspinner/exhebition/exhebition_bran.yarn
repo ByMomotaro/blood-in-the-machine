@@ -1,10 +1,13 @@
 ﻿title: ExhebitionBran
 tags:
 ---
+<<voice "Voice_1">>
 Bran: Ah Mai du bist da, gut!
 Mai: Was ist passiert?
+<<voice "Voice_2">>
 Bran: Wie es aussieht wurde der Leiter dieser Ausstellung ermordet.
     -> Am hellichten Tage?
+        <<voice "Voice_3">>
          Bran: Erstaunlicherweise ja. Er ist wohl einfach Tod umgefallen. Da er sich in einer Menschenmenge befand ist unklar, was genau passiert ist. Marlon untersucht gerade die Leiche.
             -> In Ordnung. Ich werde mich umsehen.
     -> In Ordnung. Ich werde mich umsehen.

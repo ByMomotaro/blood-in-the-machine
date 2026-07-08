@@ -49,7 +49,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		I.ItemArmDesZeugen.add()
 		dead_body_arm.visible = false
 		self.visible = false
-		Globals.arm_picked_up = true
+		GameManager.arm_picked_up = true
 
 # Called when the hotspot starts moving
 func _on_movement_started() -> void:

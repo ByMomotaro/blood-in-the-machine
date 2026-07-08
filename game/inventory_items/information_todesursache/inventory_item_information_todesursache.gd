@@ -31,8 +31,8 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		I.InformationTodesursache.remove()
 		I.ItemArmDesZeugen.remove()
 		await C.player.say("Wenn das Nervengift die Todesursache gewesen ist, dann muss der Zeuge ebenfalls mit diesem Gift in Berührung gekommen sein.")
-		I.InformationDerArmDesZeugenIstEbenfallsVergiftet.add()
-
+		I.InformationArmZeugeVergiftet.add()
+	
 
 # Called when the item is added to the inventory
 func _on_added_to_inventory() -> void:

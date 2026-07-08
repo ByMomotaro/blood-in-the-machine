@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://dbt7en4gqnfag"
 Cursor="*uid://c2pqh7ajiuiy0"
 E="*uid://rda8wggldt5o"
 R="*uid://c12vg1kte3nk5"
@@ -31,6 +30,8 @@ DialogueManager="*uid://p54pbx6m6afh"
 GameSettings="*uid://cemsrtmdjslk2"
 SoundManager="*uid://be1gwmnyt64wl"
 GlobalVariables="*uid://d0f3g3fnq1ilh"
+GameManager="*uid://d0f3g3fnq1ilh"
+Globals="*uid://dbt7en4gqnfag"
 
 [display]
 
@@ -74,7 +75,7 @@ dialogue_continue={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://game/dialogs/localisation/en-US.translation")
+locale/translations=PackedStringArray("res://game/dialogs/localisation/en.translation", "res://game/localisation/localisation_GUI.en.translation", "res://game/localisation/localisation_GUI.de.translation", "res://game/localisation/localisation_LOOK.de.translation", "res://game/localisation/localisation_LOOK.en.translation")
 
 [physics]
 

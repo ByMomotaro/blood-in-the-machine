@@ -30,11 +30,7 @@ func _on_double_click() -> void:
 
 # Called when the character is right-clicked
 func _on_right_click() -> void:
-	# Replace the call to E.command_fallback() with your own logic.
-	E.command_fallback()
-	# Example: make the player face the character and describe them.
-#	await C.player.face_clicked()
-#	await C.player.say("Mmmh, dude looks rad...")
+	C.player.say(tr("LOOK_PYR_SOLDIER"))
 
 
 # Called when the character is middle clicked

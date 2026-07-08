@@ -13,7 +13,12 @@ var state: Data = load("res://game/rooms/a_exhebition/room_a_exhebition.tres")
 # Add any code you want to setup the stage before the room is shown to the player (e.g. setting
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
+	# Makes sure, that the Player Character is visible and can move
+	C.player.visible = true
+	C.player.can_move = true
+	# Sets the Player Starting Position
 	C.player.position = starting_position.position
+	# Starts the Main Music Theme if it is not playing or if another theme is playing
 	if !SoundManager.music_player.playing or !SoundManager.current_theme == "theme":
 		SoundManager.play_music("theme")
 

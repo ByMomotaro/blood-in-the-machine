@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/rooms/cutscene_two/props/cutscene_two_background/prop_cutscene_two_background.gd" id="1_icl1b"]
 
-[node name="CutsceneTwoBackground" type="Area2D" unique_id=1657962612]
+[node name="CutsceneTwoBackground" type="Area2D" unique_id=1281276862]
 input_pickable = false
 script = ExtResource("1_icl1b")
 script_name = "CutsceneTwoBackground"
@@ -11,17 +11,17 @@ clickable = false
 cursor = 1
 interaction_polygon = PackedVector2Array()
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081218203]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1478653910]
 texture_filter = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=227826992]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2023762928]
 
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2080510901]
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=924074904]
 visible = false
 modulate = Color(1, 1, 0, 1)
 polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
-[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1538311050]
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1364188346]
 visible = false
 affect_navigation_mesh = true
 carve_navigation_mesh = true

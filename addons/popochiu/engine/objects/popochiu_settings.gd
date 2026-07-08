@@ -15,7 +15,7 @@ var text_speed := 0.0
 var auto_continue_text := false
 ## When [code]true[/code] the game will call [method Object.tr] when getting the texts to show in
 ## the game.
-var use_translations := false
+var use_translations := true
 ## An array with the [code]script_name[/code] of the inventory items that will be added to the
 ## inventory when the game starts. You can use the context menu in front of each inventory item in
 ## Popochiu's Main tab to add or remove items from start with the

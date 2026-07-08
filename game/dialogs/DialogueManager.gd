@@ -19,6 +19,7 @@ func _ready() -> void:
 	# Connects the signals for Dialogue Start and Dialogue Complete to functions
 	dialogue_runner.onDialogueStart.connect(_on_dialogue_started)
 	dialogue_runner.onDialogueComplete.connect(_on_dialogue_completed)
+	dialogue_runner.AddCommandHandlerCallable("voice", SoundManager.play_sfx)
 
 func start_dialogue(node_name: String) -> void:
 	if is_dialogue_running:
@@ -39,10 +40,9 @@ func _on_dialogue_completed() -> void:
 func dialogue_running() -> bool:
 	return is_dialogue_running
 
-func apply_text_speed() -> void:
-	print(line_presenter.lettersPerSecond)
-	line_presenter.lettersPerSecond = 5
-	print(line_presenter.lettersPerSecond)
-
 func apply_language() -> void:
 	text_line_provider.LocaleCode = GameSettings.language
+	TranslationServer.set_locale(GameSettings.language)
+
+func voice_acting() -> void:
+	print(line_presenter.get_property_list())

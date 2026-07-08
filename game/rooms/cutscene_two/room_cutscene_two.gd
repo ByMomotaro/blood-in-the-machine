@@ -8,6 +8,10 @@ var state: Data = load("res://game/rooms/cutscene_two/room_cutscene_two.tres")
 
 
 #region Virtual ####################################################################################
+func _process(delta: float) -> void:
+	if Input.is_anything_pressed():
+		get_tree().change_scene_to_file("res://game/scenes/main_menu.tscn")
+
 # Called when Popochiu loads the room. At this point the room is in the scene tree but not yet
 # visible.
 # Add any code you want to setup the stage before the room is shown to the player (e.g. setting

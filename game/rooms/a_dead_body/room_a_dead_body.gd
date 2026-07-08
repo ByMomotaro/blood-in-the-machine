@@ -18,7 +18,7 @@ func _on_room_entered() -> void:
 	C.player.can_move = false
 	C.player.visible = false
 
-	if Globals.arm_picked_up == true:
+	if GameManager.arm_picked_up == true:
 		dead_body_arm.visible = false
 		arm_des_zeugen.visible = false
 

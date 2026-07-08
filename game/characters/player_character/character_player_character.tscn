@@ -115,12 +115,14 @@ _data = {
 
 [node name="CharacterPlayerCharacter" type="Area2D" unique_id=1403012855]
 y_sort_enabled = true
+input_pickable = false
 script = ExtResource("1_gn0et")
 flips_when = 1
 walk_speed = 100.0
 idle_animation = "stand"
 script_name = "PlayerCharacter"
 description = "Player Character"
+clickable = false
 cursor = 8
 interaction_polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 metadata/_popochiu_aseprite_config_ = {
