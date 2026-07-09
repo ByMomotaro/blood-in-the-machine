@@ -32,7 +32,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		I.InformationWirkungDesNervengiftes.remove()
 		await C.player.say("Jetzt ist es sicher! Das Nervengift muss die Ursache für den Tod gewesen sein!")
 		I.InformationTodesursache.add()
-
+		C.player.animation_player.play("interact")
 
 # Called when the item is added to the inventory
 func _on_added_to_inventory() -> void:

@@ -49,6 +49,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		DialogueManager.start_dialogue("ExhebitionBranInteraction")
 		I.ItemPhioleMitGrünerFlüssigkeit.remove()
 		I.ItemPhioleMitNervengift.add()
+		C.player.animation_player.play("interact")
 
 
 # Override this to alter the idle animation or hook custom logic to it. 

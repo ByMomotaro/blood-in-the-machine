@@ -30,8 +30,9 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.ItemPhioleMitNervengift:
 		I.ItemArmProthese.remove()
 		I.ItemPhioleMitNervengift.remove()
+		C.player.animation_player.play("interact")
 		I.InformationWirkungDesNervengiftes.add()
-
+		await C.player.say("Tatsächlich! Die Prothese zuckt wie verrückt, nachdem ich das Gift eingeflößt habe.")
 
 # Called when the item is added to the inventory
 func _on_added_to_inventory() -> void:

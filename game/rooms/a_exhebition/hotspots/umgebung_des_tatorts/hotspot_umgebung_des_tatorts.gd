@@ -11,6 +11,7 @@ func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.say("Moment! Da liegt etwas zwischen den zerstörten Prothesen.")
 	I.ItemPhioleMitGrünerFlüssigkeit.add()
+	C.player.animation_player.play("interact")
 
 # Called when the hotspot is double-clicked
 func _on_double_click() -> void:

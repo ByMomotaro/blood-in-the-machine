@@ -30,6 +30,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.InformationTodesursache:
 		I.ItemArmDesZeugen.remove()
 		I.InformationTodesursache.remove()
+		C.player.animation_player.play("interact")
 		await C.player.say("Wenn das Nervengift die Todesursache gewesen ist, dann muss der Zeuge ebenfalls mit diesem Gift in Berührung gekommen sein.")
 		I.InformationArmZeugeVergiftet.add()
 

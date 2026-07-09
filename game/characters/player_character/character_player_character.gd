@@ -104,7 +104,8 @@ func _on_movement_started() -> void:
 # For example, you could play a sound effect or make something happen in the room.
 func _on_movement_ended() -> void:
 	SoundManager.stop_sfx("walking")
-
+	await get_tree().create_timer(5.0).timeout
+	C.player.animation_player.play("dudeldiedudel")
 
 #endregion
 

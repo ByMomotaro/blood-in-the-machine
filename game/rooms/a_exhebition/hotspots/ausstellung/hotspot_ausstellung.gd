@@ -11,6 +11,7 @@ func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.say("Es sind nicht alle Prothesen zerstört! Diese hier sollte noch funktionsfähig sein.")
 	I.ItemArmProthese.add()
+	C.player.animation_player.play("interact")
 
 
 # Called when the hotspot is double-clicked

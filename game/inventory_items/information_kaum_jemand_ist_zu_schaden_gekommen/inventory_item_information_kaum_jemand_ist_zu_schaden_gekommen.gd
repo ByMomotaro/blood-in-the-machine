@@ -30,6 +30,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.InformationKeineAnzeichenFürSelbstmord:
 		I.InformationKeineAnzeichenFürSelbstmord.remove()
 		I.InformationKaumJemandIstZuSchadenGekommen.remove()
+		C.player.animation_player.play("interact")
 		await C.player.say("Hmm nein. Ich schließe es aus, dass es sich dabei um einen Selbstmord handelt.")
 
 
