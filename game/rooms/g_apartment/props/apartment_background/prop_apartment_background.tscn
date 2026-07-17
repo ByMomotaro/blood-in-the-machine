@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ceqic1vo7j8qo"]
+
+[ext_resource type="Script" path="res://game/rooms/g_apartment/props/apartment_background/prop_apartment_background.gd" id="1_iti5l"]
+
+[node name="ApartmentBackground" type="Area2D" unique_id=1375261176]
+input_pickable = false
+script = ExtResource("1_iti5l")
+script_name = "ApartmentBackground"
+description = "Apartment Background"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1257689259]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=65462333]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=520732194]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1489794680]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

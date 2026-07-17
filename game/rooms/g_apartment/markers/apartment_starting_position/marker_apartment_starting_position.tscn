@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dfvg070t08byi"]
+
+[node name="ApartmentStartingPosition" type="Marker2D" unique_id=110428095]
+visible = false

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cwvuu8g0ih3i8"]
+[gd_scene load_steps=33 format=3 uid="uid://cwvuu8g0ih3i8"]
 
 [ext_resource type="Script" uid="uid://blpkp4ajtmsxa" path="res://addons/popochiu/engine/objects/gui/templates/simple_click/simple_click_gui.gd" id="1_268ni"]
 [ext_resource type="Theme" uid="uid://dpequqav4rjaf" path="res://addons/popochiu/engine/objects/gui/resources/base_gui_theme.tres" id="1_uf1ey"]
@@ -220,7 +220,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SimpleClickGUI" type="Control" unique_id=183624022]
+[node name="SimpleClickGUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -231,15 +231,15 @@ mouse_filter = 2
 theme = ExtResource("1_uf1ey")
 script = ExtResource("1_268ni")
 
-[node name="Cursor" type="AnimatedSprite2D" parent="." unique_id=956872541]
+[node name="Cursor" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1bbe3")
 animation = &"wait"
 
-[node name="SimpleClickBar" parent="." unique_id=828595637 instance=ExtResource("4_ci14x")]
+[node name="SimpleClickBar" parent="." instance=ExtResource("4_ci14x")]
 layout_mode = 1
 
-[node name="HoverText" parent="." unique_id=331629406 instance=ExtResource("2_6qu0l")]
+[node name="HoverText" parent="." instance=ExtResource("2_6qu0l")]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -248,17 +248,17 @@ offset_bottom = -4.0
 grow_vertical = 0
 hide_during_dialogs = true
 
-[node name="DialogOverhead" parent="." unique_id=204613406 instance=ExtResource("6_htxor")]
+[node name="DialogOverhead" parent="." instance=ExtResource("6_htxor")]
 layout_mode = 1
 
-[node name="DialogMenu" parent="." unique_id=201178099 instance=ExtResource("5_ayg0j")]
+[node name="DialogMenu" parent="." instance=ExtResource("5_ayg0j")]
 visible = false
 layout_mode = 1
 
-[node name="SystemText" parent="." unique_id=102770887 instance=ExtResource("4_o82xq")]
+[node name="SystemText" parent="." instance=ExtResource("4_o82xq")]
 layout_mode = 1
 
-[node name="Popups" type="Control" parent="." unique_id=996941307]
+[node name="Popups" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -267,17 +267,18 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="SimpleClickSettingsPopup" parent="Popups" unique_id=194888757 instance=ExtResource("9_dc0es")]
-layout_mode = 1
-
-[node name="SaveAndLoadPopup" parent="Popups" unique_id=1683165044 instance=ExtResource("9_ueme0")]
+[node name="SimpleClickSettingsPopup" parent="Popups" instance=ExtResource("9_dc0es")]
 visible = false
 layout_mode = 1
 
-[node name="HistoryPopup" parent="Popups" unique_id=846922984 instance=ExtResource("8_207hf")]
+[node name="SaveAndLoadPopup" parent="Popups" instance=ExtResource("9_ueme0")]
 visible = false
 layout_mode = 1
 
-[node name="QuitPopup" parent="Popups" unique_id=784842338 instance=ExtResource("14_m3nqq")]
+[node name="HistoryPopup" parent="Popups" instance=ExtResource("8_207hf")]
+visible = false
+layout_mode = 1
+
+[node name="QuitPopup" parent="Popups" instance=ExtResource("14_m3nqq")]
 visible = false
 layout_mode = 1

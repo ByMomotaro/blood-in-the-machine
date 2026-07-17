@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://yevklgapg1x0"]
+
+[ext_resource type="Script" uid="uid://bqnslyakchr7q" path="res://game/rooms/g_table/room_g_table.gd" id="1_w2dx8"]
+[ext_resource type="PackedScene" uid="uid://bl4sfjov1drro" path="res://game/rooms/g_table/props/table_background/prop_table_background.tscn" id="2_avr6d"]
+[ext_resource type="Texture2D" uid="uid://c5dpg5kov1wle" path="res://game/rooms/g_table/TableBackground.png" id="3_p05yy"]
+
+[node name="RoomGTable" type="Node2D" unique_id=1922036802]
+script = ExtResource("1_w2dx8")
+script_name = "GTable"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=320195327]
+
+[node name="Props" type="Node2D" parent="." unique_id=1675596862]
+
+[node name="TableBackground" parent="Props" unique_id=672185107 instance=ExtResource("2_avr6d")]
+position = Vector2(160, 90)
+texture = ExtResource("3_p05yy")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=752871862]
+
+[node name="Regions" type="Node2D" parent="." unique_id=510379693]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2120623749]
+
+[node name="Characters" type="Node2D" parent="." unique_id=571638554]

@@ -409,5 +409,4 @@ public partial class LinePresenter : Node, DialoguePresenterBase
 
 		dialogueRunner!.RequestNextLine();
 	}
-
 }

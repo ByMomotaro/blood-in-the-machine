@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://4ir34b0fcnng"]
+
+[ext_resource type="Script" path="res://game/rooms/g_table/room_g_table_state.gd" id="1_namml"]
+
+[resource]
+resource_name = "GTable"
+script = ExtResource("1_namml")
+script_name = "GTable"
+scene = "res://game/rooms/g_table/room_g_table.tscn"

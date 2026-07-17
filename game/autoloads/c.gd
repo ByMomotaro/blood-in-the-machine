@@ -9,6 +9,7 @@ const PCMarlon := preload("res://game/characters/marlon/character_marlon.gd")
 const PCBran := preload("res://game/characters/bran/character_bran.gd")
 const PCZeugeA := preload("res://game/characters/zeuge_a/character_zeuge_a.gd")
 const PCZeugeB := preload("res://game/characters/zeuge_b/character_zeuge_b.gd")
+const PCGrandma := preload("res://game/characters/grandma/character_grandma.gd")
 # ---- classes
 
 # nodes ----
@@ -19,6 +20,7 @@ var Marlon: PCMarlon : get = get_Marlon
 var Bran: PCBran : get = get_Bran
 var ZeugeA: PCZeugeA : get = get_ZeugeA
 var ZeugeB: PCZeugeB : get = get_ZeugeB
+var Grandma: PCGrandma : get = get_Grandma
 # ---- nodes
 
 # functions ----
@@ -29,4 +31,5 @@ func get_Marlon() -> PCMarlon: return get_runtime_character("Marlon")
 func get_Bran() -> PCBran: return get_runtime_character("Bran")
 func get_ZeugeA() -> PCZeugeA: return get_runtime_character("ZeugeA")
 func get_ZeugeB() -> PCZeugeB: return get_runtime_character("ZeugeB")
+func get_Grandma() -> PCGrandma: return get_runtime_character("Grandma")
 # ---- functions

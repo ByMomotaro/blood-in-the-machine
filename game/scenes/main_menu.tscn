@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cy32avjupc0s0" path="res://game/gui/images/MainMenuPlaceholderBackground.png" id="1_kcla8"]
 [ext_resource type="Texture2D" uid="uid://bsond4usgg5al" path="res://game/gui/images/BasicButton.png" id="2_7u77p"]
 [ext_resource type="Texture2D" uid="uid://dshs664oey7oq" path="res://game/gui/images/BasicButtonHover.png" id="3_68dpi"]
+[ext_resource type="Texture2D" uid="uid://eu2j7y85r0w0" path="res://game/gui/images/Logo.png" id="3_ihr0a"]
 [ext_resource type="FontFile" uid="uid://0kxyngjfq30k" path="res://game/gui/fonts/Pixelta.ttf" id="4_ihr0a"]
 
 [node name="MainMenu" type="Control" unique_id=1244836054]
@@ -17,15 +18,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7u77p")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035197358]
+[node name="Background" type="Sprite2D" parent="." unique_id=2035197358]
 position = Vector2(160, 90)
 texture = ExtResource("1_kcla8")
 
+[node name="Logo" type="Sprite2D" parent="." unique_id=617505707]
+position = Vector2(157, 48)
+scale = Vector2(0.12870371, 0.1287037)
+texture = ExtResource("3_ihr0a")
+
 [node name="MarginContainer" type="VBoxContainer" parent="." unique_id=35850740]
 layout_mode = 1
-offset_top = 47.0
+offset_top = 85.0
 offset_right = 320.0
-offset_bottom = 139.0
+offset_bottom = 177.0
 
 [node name="StartButton" type="TextureButton" parent="MarginContainer" unique_id=37121759]
 layout_direction = 1

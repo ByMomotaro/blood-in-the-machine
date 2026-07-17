@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b0u7lj136h5au"]
+
+[ext_resource type="Script" uid="uid://coef4coaakouh" path="res://game/rooms/g_apartment/room_g_apartment.gd" id="1_y2rim"]
+[ext_resource type="PackedScene" uid="uid://dsb53wk26a5hb" path="res://game/rooms/g_apartment/walkable_areas/apartment_floor/walkable_area_apartment_floor.tscn" id="2_dw1q1"]
+[ext_resource type="PackedScene" uid="uid://ceqic1vo7j8qo" path="res://game/rooms/g_apartment/props/apartment_background/prop_apartment_background.tscn" id="2_hmjg2"]
+[ext_resource type="Texture2D" uid="uid://d3tr6dhb1ub4a" path="res://game/rooms/g_apartment/ApartmentBackground.png" id="3_ixovd"]
+[ext_resource type="PackedScene" uid="uid://dfvg070t08byi" path="res://game/rooms/g_apartment/markers/apartment_starting_position/marker_apartment_starting_position.tscn" id="5_8oyoe"]
+[ext_resource type="PackedScene" uid="uid://cvy48tiv17w6" path="res://game/rooms/g_apartment/regions/apartment_scaling/region_apartment_scaling.tscn" id="5_ghs7b"]
+[ext_resource type="PackedScene" uid="uid://d37nhryjnjjm3" path="res://game/characters/grandma/character_grandma.tscn" id="7_qded1"]
+
+[node name="RoomGApartment" type="Node2D" unique_id=567773872]
+script = ExtResource("1_y2rim")
+script_name = "GApartment"
+width = 320
+height = 180
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1143068026]
+
+[node name="ApartmentFloor" parent="WalkableAreas" unique_id=1415174772 instance=ExtResource("2_dw1q1")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1742831534]
+
+[node name="ApartmentBackground" parent="Props" unique_id=1375261176 instance=ExtResource("2_hmjg2")]
+position = Vector2(160, 90)
+texture = ExtResource("3_ixovd")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1774045104]
+
+[node name="Regions" type="Node2D" parent="." unique_id=234309388]
+
+[node name="ApartmentScaling" parent="Regions" unique_id=986983578 instance=ExtResource("5_ghs7b")]
+position = Vector2(160, 90)
+scaling = true
+scale_bottom = 1.4
+interaction_polygon = PackedVector2Array(-117.217186, 29.783476, 58.766754, 28.676044, 134.26057, 88.88215, -156.76321, 86.76843, -159.33934, 53.921734)
+
+[node name="Markers" type="Node2D" parent="." unique_id=1364198988]
+
+[node name="ApartmentStartingPosition" parent="Markers" unique_id=110428095 instance=ExtResource("5_8oyoe")]
+position = Vector2(51.770317, 144.58136)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1739707116]
+
+[node name="CharacterGrandma *" parent="Characters" unique_id=481477708 instance=ExtResource("7_qded1")]
+position = Vector2(51, 125)
+metadata/EDITOR_TMP_COPY_OF = "Grandma"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dsb53wk26a5hb"]
+
+[ext_resource type="Script" uid="uid://cada8btwyelte" path="res://game/rooms/g_apartment/walkable_areas/apartment_floor/walkable_area_apartment_floor.gd" id="1_bgbh1"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bgbh1"]
+vertices = PackedVector2Array(70.24219, 60.0625, 93.75781, 87.4375, -151.16406, 86.03906, 26.195313, 61.664063, -73.57031, 61.992188, -151.49219, 58.625, -126.390625, 41.554688, -78.578125, 41.554688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2), PackedInt32Array(4, 2, 5, 6, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-151.49435, 58.62668, -126.38774, 41.556488, -78.58038, 41.556488, -73.56832, 61.990265, 26.19281, 61.662796, 70.2393, 60.06256, 93.75743, 87.43613, -151.16663, 86.040695)])
+agent_radius = 0.0
+
+[node name="ApartmentFloor" type="Node2D" unique_id=1415174772]
+position = Vector2(160, 90)
+script = ExtResource("1_bgbh1")
+script_name = "ApartmentFloor"
+description = "Apartment Floor"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-151.49435, 58.62668, -126.38774, 41.556488, -78.58038, 41.556488, -73.56832, 61.990265, 26.19281, 61.662796, 70.2393, 60.06256, 93.75743, 87.43613, -151.16663, 86.040695)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1437638225]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_bgbh1")
